@@ -1,0 +1,21 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+
+@import "minima";
+
+$brand-color-dark:           #a8edff;
+$brand-color-light:           #e8e8e8;
+
+/**
+ * Site header
+ */
+.site-header {
+  border-top: 0px solid $brand-color-dark;
+  border-bottom: 1px solid $brand-color-light;
+  min-height: $spacing-unit * 1.865;
+  line-height: $base-line-height * $base-font-size * 2.25;
+
+  // Positioning context for the mobile navigation icon
+  position: relative;
+}
