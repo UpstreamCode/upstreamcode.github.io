@@ -29,21 +29,29 @@ $brand-color-light:           #e8e8e8;
   padding-left: 0px;
 }
 
+/**
+* Title
+*/
+.page-heading {
+  text-align: center;
+}
 
 /**
  * Cover with image
  */
 .cover {
+  display: flex;
+  flex-direction: column;
   background-image: url("../images/guy_mountains_sunset.jpg");
   background-color: #cccccc;
-  height: 200px;
+  height: 400px;
+  justify-content: center;
+  align-items: center;
 }
 
 /**
  * Cover content
  */
  .cover-content {
-  align-items: center;
   text-align: center;
-  height: 200px;
 }
