@@ -19,3 +19,39 @@ $brand-color-light:           #e8e8e8;
   // Positioning context for the mobile navigation icon
   position: relative;
 }
+
+/**
+ * Wrapper
+ */
+ .wrapper-full {
+  max-width: 100%;
+  padding-right: 0px;
+  padding-left: 0px;
+}
+
+/**
+* Title
+*/
+.page-heading {
+  text-align: center;
+}
+
+/**
+ * Cover with image
+ */
+.cover {
+  display: flex;
+  flex-direction: column;
+  background-image: url("../images/guy_mountains_sunset.jpg");
+  background-color: #cccccc;
+  height: 400px;
+  justify-content: center;
+  align-items: center;
+}
+
+/**
+ * Cover content
+ */
+ .cover-content {
+  text-align: center;
+}
