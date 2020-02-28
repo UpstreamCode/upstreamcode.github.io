@@ -1,16 +1,21 @@
 ---
 layout: default
 ---
+
+
 <div class="home">
 
   {%- if page.title -%}
     <h1 class="page-heading">{{ page.title }}</h1>
   {%- endif -%}
 
-  <div>
-    <img style="width:100%;" src="images/guy_mountains_sunset.jpg" alt="cover photo"/>
+  <div class="full-width-content">
+    <!-- <img style="width:100%;" src="images/guy_mountains_sunset.jpg" alt="cover photo"/> -->
+    <div class="cover">
+      <h2 class="cover-content">To the ends of the earth</h2>
+    </div>
   </div>
-
+  
   {{ content }}
 
 
