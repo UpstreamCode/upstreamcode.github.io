@@ -7,6 +7,12 @@
 $brand-color-dark:           #a8edff;
 $brand-color-light:           #e8e8e8;
 
+
+$spacing-unit:     30px;
+
+// Width of the content area
+$content-width:    800px;
+
 /**
  * Site header
  */
@@ -34,6 +40,24 @@ $brand-color-light:           #e8e8e8;
 */
 .page-heading {
   text-align: center;
+  font-size: 3em;
+  color: white;
+  font-weight: bold;
+}
+
+/**
+* Page body (inside)
+*/
+.page-section {
+  margin-top: 36px;
+}
+
+/**
+* Page Content - main used in default.html
+* (overriding padding)
+*/
+.page-content {
+  padding-top: 0px;
 }
 
 /**
@@ -42,12 +66,19 @@ $brand-color-light:           #e8e8e8;
 .cover {
   display: flex;
   flex-direction: column;
-  background-image: url("../images/guy_mountains_sunset.jpg");
-  background-color: #cccccc;
-  height: 400px;
+  background-color: black;
   justify-content: center;
   align-items: center;
+  height: 500px;
+  width: 100%;
+
+  background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("../images/guy_mountains_sunset.jpg");
+  -webkit-background-size: cover;
+  -moz-background-size:  cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
+
 
 /**
  * Cover content
