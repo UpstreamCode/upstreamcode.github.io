@@ -8,10 +8,16 @@ $brand-color-dark:           #a8edff;
 $brand-color-light:           #e8e8e8;
 
 
-$spacing-unit:     30px;
+$spacing-short:     15px;
+$spacing-unit:     56px;
+$header-spacing:     30px;
+$spacing-xl:  80px;
 
 // Width of the content area
-$content-width:    800px;
+$content-width:    1200px;
+$on-large: 1200px;
+
+$text-color: #111111;
 
 /**
  * Site header
@@ -19,7 +25,7 @@ $content-width:    800px;
 .site-header {
   border-top: 0px solid $brand-color-dark;
   border-bottom: 1px solid $brand-color-light;
-  min-height: $spacing-unit * 1.865;
+  min-height: $header-spacing * 1.865;
   line-height: $base-line-height * $base-font-size * 2.25;
 
   // Positioning context for the mobile navigation icon
@@ -31,8 +37,6 @@ $content-width:    800px;
  */
  .wrapper-full {
   max-width: 100%;
-  padding-right: 0px;
-  padding-left: 0px;
 }
 
 /**
@@ -49,7 +53,8 @@ $content-width:    800px;
 * Page body (inside)
 */
 .page-section {
-  margin-top: 36px;
+  margin-top: $spacing-xl;
+  margin-bottom: $spacing-xl;
 }
 
 /**
@@ -69,7 +74,9 @@ $content-width:    800px;
   background-color: black;
   justify-content: center;
   align-items: center;
-  height: 500px;
+  height: fit-content;
+  padding-top: $spacing-xl;
+  padding-bottom: $spacing-xl;
   width: 100%;
 
   background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("../images/guy_mountains_sunset.jpg");
@@ -79,6 +86,43 @@ $content-width:    800px;
   background-size: cover;
 }
 
+/**
+ * Cover with image
+ */
+ .image {
+  display: flex;
+  flex-direction: column;
+  background-color: black;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  width: 400px;
+
+  background-image: url("../images/people-coffee-meeting.jpg");
+  -webkit-background-size: cover;
+  -moz-background-size:  cover;
+  -o-background-size: cover;
+  background-size: cover;
+ }
+
+/**
+* column
+*/
+.column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/**
+* row
+*/
+.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
 
 /**
  * Cover content
@@ -86,3 +130,72 @@ $content-width:    800px;
  .cover-content {
   text-align: center;
 }
+
+/**
+* white body text
+*/
+.body-white {
+  color: white;
+  font-size: 1.5em;
+}
+
+
+/**
+* white header 1 text
+*/
+.header2-white {
+  color: white;
+  font-size: 2em;
+  font-weight: bold;
+}
+
+/**
+* Button
+*/
+
+.button {
+  background-color: #4CAF50; /* Green */
+  width: fit-content;
+  border: none;
+  color: transparent;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: $spacing-short 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.button1 {
+  background-color: transparent; 
+  color: white; 
+  border: 2px solid white;
+  border-radius: 4px;
+}
+
+.button1:hover {
+  background-color: gray;
+  color: white;
+}
+
+
+/**
+ * Wrapper
+ */
+ .wrapper {
+  max-width: calc(#{$content-width} - (#{$spacing-unit}));
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: $spacing-unit / 2;
+  padding-left: $spacing-unit / 2;
+  @extend %clearfix;
+
+  @media screen and (min-width: $on-large) {
+    max-width: calc(#{$content-width} - (#{$spacing-unit} * 2));
+    padding-right: $spacing-unit;
+    padding-left: $spacing-unit;
+  }
+}
+

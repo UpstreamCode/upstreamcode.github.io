@@ -2,39 +2,42 @@
 layout: default
 ---
 
-
 <div class="home">
 
-
-
-  <div class="full-width-content">
-    <!-- <img style="width:100%;" src="images/guy_mountains_sunset.jpg" alt="cover photo"/> -->
-    <div class="cover" style="background-image: linear-gradient( 
-        rgba(0, 0, 0, 0.5), 
-        rgba(0, 0, 0, 0.5) ), 
-        url({{ '../images/' | append: page.cover }}) ;">  
-      {%- if page.heading -%}
-      <h1 class="page-heading">{{ page.heading }}</h1>
-      {%- endif -%}
-      <!-- <h2 class="cover-content">To the ends of the earth</h2> -->
-      </div>
-    </div>
-  </div>
+  {%- include cover.html -%}
   
   <div class="wrapper">
 
-    <div class="page-section">
-    {{ content }}
+    <div class="row">
+      <div class="page-section" style="max-width: 60%;">
+        {{ content }}
+      </div>
+      <image src="../images/heart_icon.svg" style="display: flex; flex-direction: row; justify-content: stretch; align-items: center;"></image>
     </div>
 
   </div>
 
+  <div class="cover" style="
+    height: 300px;
+    background-image: linear-gradient( 
+    rgba(0, 0, 0, 0.5), 
+    rgba(0, 0, 0, 0.5) ), 
+    url({{ '../images/people-coffee-meeting.jpg'}});">  
 
-  {% if site.paginate %}
-    {% assign posts = paginator.posts %}
-  {% else %}
-    {% assign posts = site.posts %}
-  {% endif %}
+    <div class="wrapper">
+      <div class="page-section">
+        <div class="column" style="width: 60%;">
+          <h3 class="header2-white"> Why Upstream? </h3>
+          <div class="body-white"> We have come together in response to a need - 
+            to innovate alongside missionaries in order to see the least reached have access to the gospel. </div>
+          <button class="button button1" onclick="location.href='/about/'" type="button">About Us</button>
+        </div>
+        </div>
+    </div>
+
+  </div>
+
+  {% assign posts = site.posts %}
 
 
   {%- if posts.size > 0 -%}
@@ -45,42 +48,20 @@ layout: default
       {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
       {%- for post in posts -%}
       <li>
-        <span class="post-meta">{{ post.date | date: date_format }}</span>
+
         <h3>
-          <a class="post-link" href="{{ post.url | relative_url }}">
-            {{ post.title | escape }}
-          </a>
+
+          <div class="wrapper"">
+            <h2> {{ post.title | escape }} </h2>
+            {{ post.excerpt }}
+          </div>
+
         </h3>
-        {%- if site.show_excerpts -%}
-          {{ post.excerpt }}
-        {%- endif -%}
+
       </li>
       {%- endfor -%}
     </ul>
 
-    {% if site.paginate %}
-      <div class="pager">
-        <ul class="pagination">
-        {%- if paginator.previous_page %}
-          <li><a href="{{ paginator.previous_page_path | relative_url }}" class="previous-page">{{ paginator.previous_page }}</a></li>
-        {%- else %}
-          <li><div class="pager-edge">•</div></li>
-        {%- endif %}
-          <li><div class="current-page">{{ paginator.page }}</div></li>
-        {%- if paginator.next_page %}
-          <li><a href="{{ paginator.next_page_path | relative_url }}" class="next-page">{{ paginator.next_page }}</a></li>
-        {%- else %}
-          <li><div class="pager-edge">•</div></li>
-        {%- endif %}
-        </ul>
-      </div>
-    {%- endif %}
-
-    <p class="feed-subscribe">
-      <a href="{{ 'feed.xml' | relative_url }}">
-        <svg class="svg-icon orange"><use xlink:href="{{ 'assets/minima-social-icons.svg#rss' | relative_url }}"></use></svg><span>Subscribe</span>
-      </a>
-    </p>
   {%- endif -%}
 
 </div>
