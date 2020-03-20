@@ -2,39 +2,39 @@
 layout: default
 ---
 
-
 <div class="home">
 
+  {%- include cover.html -%}
 
-
-  <div class="full-width-content">
-    <!-- <img style="width:100%;" src="images/guy_mountains_sunset.jpg" alt="cover photo"/> -->
-    <div class="cover" style="background-image: linear-gradient( 
-        rgba(0, 0, 0, 0.5), 
-        rgba(0, 0, 0, 0.5) ), 
-        url({{ '../images/' | append: page.cover }}) ;">  
-      {%- if page.heading -%}
-      <h1 class="page-heading">{{ page.heading }}</h1>
-      {%- endif -%}
-      <!-- <h2 class="cover-content">To the ends of the earth</h2> -->
-      </div>
-    </div>
-  </div>
-  
   <div class="wrapper">
-
     <div class="page-section">
-    {{ content }}
-    </div>
-
+      <div class="column" style="max-width: 600px;">
+        <h2> Why Upstream? </h2>
+        <body> We have come together in response to a need - 
+          to innovate alongside missionaries in order to see the least reached have access to the gospel. </div>
+        <button class="button button-dark" onclick="location.href='/about/'" type="button">About Us</button>
+      </div>
+      </div>
   </div>
 
 
-  {% if site.paginate %}
-    {% assign posts = paginator.posts %}
-  {% else %}
-    {% assign posts = site.posts %}
-  {% endif %}
+  <div class="background-image" style="
+    background-image: linear-gradient( 
+    rgba(0, 0, 0, 0.5), 
+    rgba(0, 0, 0, 0.5) ), 
+    url({{ '../images/three-boys-sitting.jpg'}});">  
+    <div class="wrapper" style="display:flex; flex-direction:column; align-items:flex-end; width:inherit">
+      <div class="page-section" style="margin-right: 56px; padding-top: 120px; padding-bottom: 120px;" >
+        <div class="column" style="max-width: 600px; display: flex; flex-direction:column; align-items:flex-end;">
+          <h2 class="h2 h2-white" style="text-align: right;"> Frontline Missions </h2>
+          <div class="body-white" style="text-align: right; "> Upstream creates space for developers in a variety of contexts to get involved in work among unreached peoples. </div>
+          <button class="button button-light" onclick="location.href='/get-involved/'" type="button" style="width: min-content;">Join</button>
+        </div>
+        </div>
+    </div>
+  </div>
+
+  {% assign posts = site.posts %}
 
 
   {%- if posts.size > 0 -%}
@@ -45,42 +45,20 @@ layout: default
       {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
       {%- for post in posts -%}
       <li>
-        <span class="post-meta">{{ post.date | date: date_format }}</span>
+
         <h3>
-          <a class="post-link" href="{{ post.url | relative_url }}">
-            {{ post.title | escape }}
-          </a>
+
+          <div class="wrapper"">
+            <h2> {{ post.title | escape }} </h2>
+            {{ post.excerpt }}
+          </div>
+
         </h3>
-        {%- if site.show_excerpts -%}
-          {{ post.excerpt }}
-        {%- endif -%}
+
       </li>
       {%- endfor -%}
     </ul>
 
-    {% if site.paginate %}
-      <div class="pager">
-        <ul class="pagination">
-        {%- if paginator.previous_page %}
-          <li><a href="{{ paginator.previous_page_path | relative_url }}" class="previous-page">{{ paginator.previous_page }}</a></li>
-        {%- else %}
-          <li><div class="pager-edge">•</div></li>
-        {%- endif %}
-          <li><div class="current-page">{{ paginator.page }}</div></li>
-        {%- if paginator.next_page %}
-          <li><a href="{{ paginator.next_page_path | relative_url }}" class="next-page">{{ paginator.next_page }}</a></li>
-        {%- else %}
-          <li><div class="pager-edge">•</div></li>
-        {%- endif %}
-        </ul>
-      </div>
-    {%- endif %}
-
-    <p class="feed-subscribe">
-      <a href="{{ 'feed.xml' | relative_url }}">
-        <svg class="svg-icon orange"><use xlink:href="{{ 'assets/minima-social-icons.svg#rss' | relative_url }}"></use></svg><span>Subscribe</span>
-      </a>
-    </p>
   {%- endif -%}
 
 </div>

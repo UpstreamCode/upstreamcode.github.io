@@ -1,0 +1,18 @@
+
+<div class="cover background-image" style="background-image: linear-gradient( 
+    rgba(0, 0, 0, 0.5), 
+    rgba(0, 0, 0, 0.5) ), 
+    url({{ '../images/' | append: page.cover }}) ;">  
+    {%- if page.heading -%}
+    <h1 class="page-heading">{{ page.heading }}</h1>
+    {%- endif -%}
+    {%- if page.subheading -%}
+    <div class="wrapper">
+        <h3 class="body-white" style="max-width: 600px; text-align: center;">{{ page.subheading }}</h3>
+    </div>
+    {%- endif -%}
+    {%- if page.button_text -%}
+    <button class="button button-light" onclick="location.href='{{ page.button_link }}'">{{ page.button_text }}</h1>
+    {%- endif -%}
+    <!-- <h2 class="cover-content">To the ends of the earth</h2> -->
+</div>
