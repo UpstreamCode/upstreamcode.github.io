@@ -11,7 +11,7 @@ $brand-color-light:           #e8e8e8;
 $spacing-short:     15px;
 $spacing-unit:     56px;
 $header-spacing:     30px;
-$spacing-xl:  80px;
+$spacing-xl:  100px;
 
 // Width of the content area
 $content-width:    1200px;
@@ -75,15 +75,21 @@ $text-color: #111111;
   justify-content: center;
   align-items: center;
   height: fit-content;
-  padding-top: $spacing-xl;
-  padding-bottom: $spacing-xl;
   width: 100%;
 
+  padding-top: $spacing-xl;
+  padding-bottom: $spacing-xl;
+}
+
+.background-image {
+  background-color: black;
+  
   background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("../images/guy_mountains_sunset.jpg");
   -webkit-background-size: cover;
   -moz-background-size:  cover;
   -o-background-size: cover;
   background-size: cover;
+  background-position: center; 
 }
 
 /**
@@ -134,19 +140,45 @@ $text-color: #111111;
 /**
 * white body text
 */
+body {
+  font-size: 1.2em;
+
+}
+
+/**
+* white body text
+*/
 .body-white {
   color: white;
-  font-size: 1.5em;
 }
 
 
 /**
 * white header 1 text
 */
-.header2-white {
-  color: white;
+h2 {
   font-size: 2em;
   font-weight: bold;
+}
+
+/**
+* white header 2 text
+*/
+.h2-white {
+  color: white;
+}
+
+h3 {
+  font-size: 1.8em;
+  font-weight: lighter;
+}
+
+blockquote {
+  border-left: .25em solid #dfe2e5;
+  color: #8f8f8f;
+  padding: 0 1em;
+  font-size: 1.8em;
+  font-weight: lighter;
 }
 
 /**
@@ -166,16 +198,26 @@ $text-color: #111111;
   margin: $spacing-short 2px;
   transition-duration: 0.4s;
   cursor: pointer;
-}
-
-.button1 {
-  background-color: transparent; 
-  color: white; 
-  border: 2px solid white;
   border-radius: 4px;
 }
 
-.button1:hover {
+.button-light {
+  background-color: transparent; 
+  color: white; 
+  border: 2px solid white;
+}
+.button-light:hover {
+  background-color: gray;
+  color: white;
+}
+
+.button-dark {
+  background-color: transparent; 
+  color: black; 
+  border: 2px solid black;
+}
+
+.button-dark:hover {
   background-color: gray;
   color: white;
 }

@@ -5,36 +5,33 @@ layout: default
 <div class="home">
 
   {%- include cover.html -%}
-  
+
   <div class="wrapper">
-
-    <div class="row">
-      <div class="page-section" style="max-width: 60%;">
-        {{ content }}
+    <div class="page-section">
+      <div class="column" style="max-width: 600px;">
+        <h2> Why Upstream? </h2>
+        <body> We have come together in response to a need - 
+          to innovate alongside missionaries in order to see the least reached have access to the gospel. </div>
+        <button class="button button-dark" onclick="location.href='/about/'" type="button">About Us</button>
       </div>
-      <image src="../images/heart_icon.svg" style="display: flex; flex-direction: row; justify-content: stretch; align-items: center;"></image>
-    </div>
-
+      </div>
   </div>
 
-  <div class="cover" style="
-    height: 300px;
+
+  <div class="background-image" style="
     background-image: linear-gradient( 
     rgba(0, 0, 0, 0.5), 
     rgba(0, 0, 0, 0.5) ), 
-    url({{ '../images/people-coffee-meeting.jpg'}});">  
-
-    <div class="wrapper">
-      <div class="page-section">
-        <div class="column" style="width: 60%;">
-          <h3 class="header2-white"> Why Upstream? </h3>
-          <div class="body-white"> We have come together in response to a need - 
-            to innovate alongside missionaries in order to see the least reached have access to the gospel. </div>
-          <button class="button button1" onclick="location.href='/about/'" type="button">About Us</button>
+    url({{ '../images/three-boys-sitting.jpg'}});">  
+    <div class="wrapper" style="display:flex; flex-direction:column; align-items:flex-end; width:inherit">
+      <div class="page-section" style="margin-right: 56px; padding-top: 120px; padding-bottom: 120px;" >
+        <div class="column" style="max-width: 600px; display: flex; flex-direction:column; align-items:flex-end;">
+          <h2 class="h2 h2-white" style="text-align: right;"> Frontline Missions </h2>
+          <div class="body-white" style="text-align: right; "> Upstream creates space for developers in a variety of contexts to get involved in work among unreached peoples. </div>
+          <button class="button button-light" onclick="location.href='/get-involved/'" type="button" style="width: min-content;">Join</button>
         </div>
         </div>
     </div>
-
   </div>
 
   {% assign posts = site.posts %}
