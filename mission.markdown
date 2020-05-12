@@ -17,8 +17,11 @@ Upstream is a network that seeks to bring the horizontal scope of software devel
 ### How is Upstream different from other media initiatives? 
 Media and technology often go hand-in-hand when getting the gospel to unreached people groups. Developers build the tools, such as mobile apps, that media groups and traditional teams use to engage unreached communities with the gospel.
 
-### So how does this work? 
-Field teams submit ideas for how a smartphone app can strategically move their church planting efforts forward. Then Upstream will see if we can build it.
+### So how does this work?
+Field teams submit ideas for how a tech solution can strategically move their church planting efforts forward. Then Upstream will see if we can build it.
+
+### I have a project idea!
+Great!  [Submit your idea here](/contact-us)
 
 ### I'm not a "technology person". 
 No problem. Upstream would love to engage your team to help envision how a mobile app can fit into your church planting strategy.
