@@ -14,51 +14,44 @@ layout: default
             action="https://formspree.io/mbjzlzpq"
             method="POST">
             <label >
-                Name:<br>
-                <input type="text" name="Name" size="40" 
-                required=true 
-                style="margin-bottom: 1em; font-size: 1em;" ><br>
+                Name<br>
+                <input class="input" type="text" name="Name"
+                required=true><br>
             </label>
             <label>
-                Email:<br>
-                <input type="text" name="_replyto" size="40" 
-                required=true 
-                style="margin-bottom: 1em; font-size: 1em;"><br>
+                Email<br>
+                <input class="input" type="text" name="_replyto"
+                required=true><br>
             </label>
             <label>
-                Organization: (optional)<br>
-                <input type="text" name="Organization" size="40" 
-                style="margin-bottom: 1em; font-size: 1em;"><br>
+                Organization (optional)<br>
+                <input class="input" type="text" name="Organization"><br>
             </label>
             <label>
-                Description of project: <br>
-                <textarea name="message" cols="48" rows="5" maxlength="200"
-                required=true 
-                style="margin-bottom: 1em; font-size: 1em;"></textarea><br>
+                Description of project <br>
+                <textarea class="input" name="message" rows="5" maxlength="200"
+                required=true ></textarea><br>
             </label>
             <label>
                 Who is the target audience (people group, geographical location, etc)? <br>
-                <textarea name="message" cols="48" rows="2" maxlength="200"
-                required=true 
-                style="margin-bottom: 1em; font-size: 1em;"></textarea><br>
+                <textarea class="input" name="message" rows="2" maxlength="200"
+                required=true ></textarea><br>
             </label>
             <label>
                 How would this project serve church planting movements? <br>
-                <textarea name="message" cols="48" rows="5" maxlength="200"
-                required=true 
-                style="margin-bottom: 1em; font-size: 1em;"></textarea><br>
+                <textarea class="input" name="message" rows="5" maxlength="200"
+                required=true ></textarea><br>
             </label>
             <label>
                 What needs would this project meet that can’t be met through existing tools? <br>
-                <textarea name="message" cols="48" rows="5" maxlength="200"
-                required=true 
-                style="margin-bottom: 1em; font-size: 1em;"></textarea><br>
+                <textarea class="input" name="message" rows="5" maxlength="200"
+                required=true ></textarea><br>
             </label>
             <!-- your other form fields go here -->
 
             <input type="hidden" name="_next" value="/contact-thanks" />
             <input type="hidden" name="_subject" value="Project Idea" />
-            <button type="submit">Send</button>
+            <button class="button button-dark" type="submit">Submit</button>
         </form>
     </div>
 
