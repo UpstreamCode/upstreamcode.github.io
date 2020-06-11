@@ -5,7 +5,7 @@
 layout: home
 title: Upstream
 heading: Coding for the Unreached
-subheading: A community of software developers innovating together to advance church planting efforts.
+subheading: A community of developers innovating together to advance church planting efforts.
 button_text: Join the Movement
 button_link: /get-involved/
 cover: guy_mountains_sunset.jpg
