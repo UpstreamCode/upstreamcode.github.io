@@ -13,7 +13,8 @@
     {%- endif -%}
     {%- if page.button_newsletter -%}
     <button id="newsletterButton" class="button button-light">Join the Mailing List</button>
-    {%- else page.button_text -%}
+    {%- endif -%}
+    {%- if page.button_text -%}
     <button class="button button-light" onclick="location.href='{{ page.button_link }}'">{{ page.button_text }}</button>
     {%- endif -%}
 
@@ -53,7 +54,7 @@
             <!--End mc_embed_signup-->
         </div>
   </div>
-  
+
     <script>
         // Get the modal
         var modal = document.getElementById("myModal");
