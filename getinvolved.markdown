@@ -6,16 +6,16 @@ permalink: /get-involved/
 cover: tea-laptop.jpg
 ---
 
-## I’m a developer. How can I join?
+## How can I join?
 
 ### From home
 If you're an industry professional, it would be a privilege to touch base with you about our projects and explore how the Lord might be overlapping your story with ours.  Send us an email at [upstream.code@gmail.com](mailto:upstream.code@gmail.com).
 
 ### Short-term
-Edge and Venture are our short and mid-term opportunities up to one year long. They are support raised through Pioneers, and we are able to work with universities to fulfill internship requirements. We’d love for you to join us! Check out [Pioneers.org](https://edge.pioneers.org/#/) for more details.   <br />
+Edge and Venture are our short and mid-term opportunities up to one year long. They are support raised through Pioneers, and we are able to work with universities to fulfill internship requirements. We’d love for you to join us. <br/><br/>Summer 2021, we will have a short-term trip in which you can use your skills for missions with our team! <br/>Check it out: [Edge Trip 2021 - Upstream Team](https://edge.pioneers.org/opportunities/developer-summer-mission-trip/)   <br />
 
 ### Long-term
-Whether you’re looking to move overseas or are already on the field, we want to connect with you. If Upstream isn’t a good fit, we may have connections with other teams and projects that might be. We’d love to be a resource for you.
+Whether you’re looking to move overseas or are already on the field, we want to connect with you. We have connections with field teams in Pioneers and projects that might be a good fit for your skills, and we’d love to be a resource for you.
 
 <br />
 
@@ -29,6 +29,7 @@ Email: [upstream.code@gmail.com](https://pioneers.org/#/)
 
 Github: [UpstreamCode](https://github.com/UpstreamCode)
 
+Facebook: [upstreamcode](https://www.facebook.com/upstreamcode)
 
  <br />
 
