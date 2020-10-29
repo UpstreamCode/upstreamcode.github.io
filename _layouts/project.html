@@ -1,0 +1,77 @@
+---
+layout: default
+---
+
+<div class="home">
+
+  {%- include cover.html -%}
+  
+  <div class="wrapper">
+
+    <div class="page-section">
+      <h1 class="post-title p-name" itemprop="name headline">{{ page.title | escape }}</h1>
+
+      <!-- Basic Info -->
+      <div class="project-row">
+        {%- if page.featured_image -%}
+        <div class="project-column left">
+          <img src="{{ '../images/' | append: page.featured_image }}" alt="Featured Image" style="margin-right:1em;">
+        </div>
+        {%- endif -%}
+        <div class="project-column right" >
+          <h3>Description</h3>
+          <p> {{ page.description }}</p>
+          <h3>Check It Out</h3>
+          {%- if page.indigitous_link -%}
+            <p>Indigitous Project: <a href="{{ page.indigitous_link }}">{{ page.indigitous_link }}</a><br></p>
+          {%- endif -%}
+
+          {%- if page.github -%}
+            <p>Github: <a href="{{ page.github }}">{{ page.github }}</a><br></p>
+          {%- endif -%}
+
+          {%- if page.devpost -%}
+            <p>Devpost: </h3><a href="{{ page.devpost }}">{{ page.devpost }}</a><br></p>
+          {%- endif -%}
+
+          {%- if page.design -%}
+            <p>Design: </h3><a href="{{ page.design }}">{{ page.design }}</a><br></p>
+          {%- endif -%}
+
+          {%- if page.ios -%}
+            <p>iOS: </h3><a href="{{ page.ios }}">{{ page.ios }}</a><br></p>
+          {%- endif -%}
+
+          {%- if page.android -%}
+            <p>Android: </h3><a href="{{ page.android }}">{{ page.android }}</a><br></p>
+          {%- endif -%}
+
+          {%- if page.skills_needed -%}
+            <h3>Skills Needed:</h2>
+            <p>{{ page.skills_needed }}</p>
+          {%- endif -%}
+        </div> 
+      </div>
+
+      <!-- Video -->
+      {%- if page.video -%}
+      <div class="video-container" style="margin-top: 2em; margin-bottom: 1em;">
+      <iframe class="responsive-iframe" src="{{ page.video }}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </iframe> 
+      </div>
+      {%- endif -%}
+
+      <!-- Other content  -->
+      {{ content }}
+
+      <!-- Contact -->
+      <div style="margin-top: 1em;">
+        <p>If you're interested in joining this project, contact us!</p>
+        {%-if page.contact -%}<p>Contact: <a href="mailto:{{ page.contact }}">{{ page.contact }}</a></p>{%- endif -%}
+        {%-if page.slack -%}<p>Slack: <a href="https://{{ page.slack }}">{{ page.slack }}</a></p>{%- endif -%}
+      </div>
+    </div>
+
+  </div>
+
+</div>

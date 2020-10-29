@@ -297,3 +297,59 @@ blockquote {
   background-color: #fff; 
   box-sizing:border-box; 
   height:32px; padding: 0px 0.4em; display: inline-block; margin: 0; width:350px; vertical-align:top;}
+
+/* Project Page */
+.project-row {
+  display: flex;
+  flex-direction: row;
+  vertical-align: top;
+  justify-content: flex-start;
+}
+
+.project-column {
+  float: left;
+}
+.left {
+  width: 25%;
+}
+
+.right {
+  width: 75%;
+  padding-left: 1em;
+}
+
+.project-thumbnail {
+  height: 200px;
+  width: 400px;
+  object-fit: cover;
+  object-position: 0 0;
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .project-row {
+    flex-direction: column;
+  }
+  .left, .right {
+    width: 100%;
+    padding-left: 0em;
+    padding-bottom: 1em;
+  }
+}
+.video-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  padding-top: 56.25%; /* 16:9 Aspect Ratio */
+}
+
+.responsive-iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
