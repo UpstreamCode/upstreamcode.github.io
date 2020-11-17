@@ -63,6 +63,8 @@ Github: [UpstreamCode](https://github.com/UpstreamCode)
 
 Facebook: [upstreamcode](https://www.facebook.com/upstreamcode)
 
+Slack: [upstreamcode.slack.com](upstreamcode.slack.com)
+
  <br />
 
 ------
