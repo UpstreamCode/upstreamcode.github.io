@@ -10,10 +10,10 @@ cover: tea-laptop.jpg
 
 We are based on an open source model and invite anyone who’s interested to send us an email at [upstream.code@gmail.com](mailto:upstream.code@gmail.com). We’ll connect with you and explore how we can partner together.
 
-### [Ro Bible App]({% link projects/ro-story-app.md %})
+### [Audio Bible Story App]({% link projects/bible-story-app.md %})
 Audio Bible Story App for a specific people group
 
-[![Ro Story App Screenshot](../images/project_imgs/ro-screenshot.png){:class="project-thumbnail"}]({% link projects/ro-story-app.md %})
+[![Story App Screenshot](../images/project_imgs/story-app-screenshot.png){:class="project-thumbnail"}]({% link projects/bible-story-app.md %})
 
 &nbsp;
 ### [Story Crafter Mobile App]({% link projects/story-crafter.md %})
