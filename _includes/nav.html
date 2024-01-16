@@ -1,0 +1,61 @@
+<nav id="main-nav" class="navbar navbar-expand-md fixed-top {{ page.nav_state }}" data-nav-state="{{ page.nav_state }}">
+  <div class="container-md">
+    <a class="navbar-brand" href="/">
+        <span class="logo-transparent-bg logo{% if page.nav_state == 'transparent-light' %} logo-show{% else %} logo-hide{% endif %}">{% include svgs/logo-transparent-bg.svg %}</span>
+        <span class="logo-solid-bg logo{% if page.nav_state == 'solid' or page.nav_state == 'transparent-dark' %} logo-show {% else %} logo-hide{% endif %}">{% include svgs/logo-solid-bg.svg %}</span>
+        <span class="secondary-nav-back d-none">{% include svgs/icons/chevron/chev-left.svg %} All</span>
+    </a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#main-nav-container"
+      aria-controls="main-nav-container"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="main-nav-container">
+      <ul id="primary-nav" class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            href="/about/"
+            id="navbar-dropdown"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            About Us <span class="caret closed">
+                {% include svgs/icons/chevron/chev-expand.svg %}
+            </span>
+            <span class="caret open">
+                {% include svgs/icons/chevron/chev-collapse.svg %}
+            </span>
+          </a>
+          {% include nav-about.html class="dropdown-menu" %}
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Our Solution</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/partner/">Partner</a>
+        </li>
+      </ul>
+      <div id="mobile-secondary-nav" class="d-none">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+                <a class="nav-link" href="/about/">
+                    About Us
+                </a>
+                {% include nav-about.html class="" %}
+            </li>
+        </ul>
+      </div>
+      <form class="d-grid gap-2 d-md-block">
+        <a href="/serve/" class="btn btn-primary btn-sm">Serve</a>
+      </form>
+    </div>
+  </div>
+</nav>

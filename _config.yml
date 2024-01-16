@@ -28,17 +28,21 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  UpstreamCode
 facebook_username: upstreamcode
+donate_url: https://give.pioneers.org/s-donate?firstname=%27Upstream%27&ProjectCode=151045
 
-header_pages:
-
-  - mission.markdown
-  - getinvolved.markdown
-  - about.markdown
+theme: null
 
 # Build settings
-theme: minima
 plugins:
   - jekyll-feed
+  - jekyll-autoprefixer
+
+sass:
+  sass_dir: _sass
+  style: compressed
+
+include:
+  - _pages
 
 # Exclude from processing.
 # The following items will not be processed, by default.

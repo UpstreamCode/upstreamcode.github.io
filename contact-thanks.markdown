@@ -1,5 +1,5 @@
 ---
-layout: about
+layout: default
 title: Thanks
 heading: Thanks!
 permalink: /contact-thanks/

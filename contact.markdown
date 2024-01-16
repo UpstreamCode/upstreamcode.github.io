@@ -1,5 +1,5 @@
 ---
-layout: form
+layout: default
 title: Contact Us
 heading: Contact Us
 permalink: /contact-us/

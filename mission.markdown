@@ -1,5 +1,5 @@
 ---
-layout: about
+layout: default
 title: Our Mission
 heading: Our Mission
 permalink: /mission/
