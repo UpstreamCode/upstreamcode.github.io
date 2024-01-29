@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+
+  {%- include head.html -%}
+
+  <body>
+    {%- include nav.html -%}
+
+    <main class="article-content" aria-label="Content">
+      <div class="container-fluid">
+        <div class="row align-items-center">
+          <div class="d-none d-md-flex col-md-2"></div>
+          <div class="metadata text-center col-md-8 px-4 px-md-0">
+            <p class="duration">{{ page.duration }}</p>
+            <h1>{{ page.title }}</h1>
+            <p class="author{% if page.author == "" or page.author == nil %} d-none{% endif %}">By {{ page.author }}</p>
+            <img src="{{ "/assets/images/" | append:page.image | relative_url }}" alt="{{ page.image_alt }}" class="img-fluid">
+          </div>
+          <div class="d-none d-md-flex col-md-2"></div>
+        </div>
+        <div class="row content">
+          <div class="d-none d-md-flex col-md-3"></div>
+          <div class="col-12 col-md-6 px-4 px-md-0">
+            {{ content }}
+            <div id="share-component">
+              <p class="sm-label">Share</p>
+              <div class="d-flex justify-content-start flex-row gap-2">
+                {% include svgs/icons/social/facebook.svg %}
+                {% include svgs/icons/social/x.svg %}
+                {% include svgs/icons/social/linked-in.svg %}
+                {% include svgs/icons/social/link.svg %}
+                {% include svgs/icons/social/email.svg %}
+              </div>
+            </div>
+          </div>
+          <div class="d-none d-md-flex col-md-3"></div>
+        </div>
+        <div id="related-posts" class="row">
+          <div class="d-none d-md-flex col-md-1"></div>
+          <div class="col-12 col-md-10 px-4 px-md-0">
+            <div class="row justify-content-center">
+              <div class="col-12 heading">
+                <div class="d-flex flex-column flex-md-row justify-content-between align-items-center">
+                  <h2>Related Articles</h2>
+                  <a href="/articles/">View All Posts {% include svgs/icons/arrows/arrow-right.svg %}</a>
+                </div>
+              </div>
+              {% for post in site.related_posts limit:3 %}
+                <div class="col-12 col-md-4 m-margin-bottom">
+                  <div class="card h-100">
+                    <a href="{{ post.url }}" class="card-pic-link">
+                      <img src="{{ "/assets/images/" | append:post.image | relative_url }}"
+                        alt="{{ post.image_alt }}">
+                    </a>
+                    <div class="card-body">
+                      <p class="duration">{{ post.duration }}</p>
+                      <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+                      <p class="snippet">{{ post.excerpt }}</p>
+                    </div>
+                  </div>
+                </div>
+              {% endfor %}
+            </div>
+          </div>
+          <div class="d-none d-md-flex col-md-1"></div>
+        </div>
+      </div>
+    </main>
+
+    {%- include footer.html -%}
+
+  </body>
+
+</html>
