@@ -1682,6 +1682,36 @@ main {
       padding-bottom: 2px;
     }
 
+    img.img-rounded {
+      border-radius: 20px;
+    }
+
+    p.resource-topic {
+      font-weight: 600;
+      font-size: 16px;
+      text-transform: capitalize;
+      margin-bottom: 8px;
+    }
+
+    p.resource-title {
+      font-family: Gilroy, sans-serif;
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 32px;
+      margin-bottom: 8px;
+    }
+
+    p.resource-author {
+      font-weight: 600;
+      font-size: 16px;
+    }
+
+    p.resource-description {
+      font-weight: 400;
+      font-size: 15px;
+      line-height: 24px;
+    }
+
     .footnotes {
       font-family: 'Noto Sans', sans-serif;
       font-weight: 400;
