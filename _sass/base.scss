@@ -1682,8 +1682,26 @@ main {
       padding-bottom: 2px;
     }
 
-    img.img-rounded {
+    img.resource-img {
       border-radius: 20px;
+      width: 303px;
+      margin-top: 32px;
+      margin-bottom: 32px;
+
+      @include media-breakpoint-down(md) {
+        width: 240px;
+        margin-top: 0px;
+        margin-bottom: 0px;
+      }
+    }
+    
+    div.resource-detail {
+      margin-top: 32px;
+      margin-bottom: 32px;
+
+      @include media-breakpoint-down(md) {
+        margin-top: 24px;
+      }
     }
 
     p.resource-topic {
