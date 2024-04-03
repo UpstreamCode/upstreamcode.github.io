@@ -16,7 +16,7 @@ I often find that the language of Scripture Engagement (SE) is foreign to those 
 
 ### Scripture Engagement Scale
 
-![Scripture Engagement Scale](/assets/images/articles/scripture-engagement-scale-placeholder.png){: .img-fluid}
+![Scripture Engagement Scale](/assets/images/articles/Scripture-Engagement-Scale@2x.png){: .img-fluid}
 
 I was trained by an SIL Scripture Engagement consultant to think about SE as content that points to Scripture itself or Scripture communicated in local forms.<sup>[1](#1-sil-thinks-about-se-this-way-their-definition-is-accessing-understanding-and-interacting-meaningfully-with-the-life-changing-message-of-the-scriptures-httpswwwsilorgtranslationscripture-engagement-but-i-find-that-some-missionaries-even-within-sil-are-confused-about-the-meaning-of-se-this-is-in-part-i-believe-because-of-the-terminology-se-is-often-misunderstood-as-ways-in-which-we-can-get-people-to-read-a-bible-translation-i-hope-that-the-graphic-above-gives-a-better-picture-of-what-we-mean-by-se)</sup>  In the diagram above, SE points to the Bible itself, which is its telos. 
 
