@@ -1602,6 +1602,7 @@ main {
       width: 40vw;
       height: 40vw;
       max-width: inherit!important;
+      margin: 48px 0;
 
       @include media-breakpoint-down(md) {
         width: 80vw;
@@ -1662,6 +1663,48 @@ main {
       font-size: 16px;
       line-height: 24px;
     }
+  }
+
+  #content-box-6 {
+    margin-bottom: 96px;
+
+    @include media-breakpoint-down(md) {
+      padding: 20px;
+    }
+
+    .case-study {
+      width: 100%;
+    }
+
+    .case-study-img {
+      aspect-ratio: 1 / 1;
+      border-radius: 40px;
+      object-fit: cover;
+    }
+
+    .accordion-item {
+      margin-top: 16px;
+      border-radius: 15px;
+    }
+
+    .accordion-header {
+      margin-top: 16px;
+    }
+
+    .accordion-button {
+      padding: 24px;
+      color: map-get($primary-colors, 'black');
+      background-color: transparent;
+      font-family: Gilroy, sans-serif;
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 24px;
+    }
+
+    .accordion-body {
+      padding: 24px;
+    }
+  
   }
 
   #question-hero {
