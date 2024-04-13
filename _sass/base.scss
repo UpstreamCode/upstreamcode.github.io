@@ -916,7 +916,10 @@ main {
   .content-box {
     @include media-breakpoint-down(md) {
       margin-top: 48px;
+      padding: 0px;
     }
+
+    
 
     #process-accordion {
       h2 {
@@ -924,12 +927,25 @@ main {
       }
 
       .accordion-item {
-        margin-bottom: 40px;
+        display: flex;
+        margin-bottom: 0px;
+      }
+
+      .accordion-line {
+        display: flex;
+        border-left: solid 2px map-get($neutral-colors, 6);
+        position: relative;
+        left: 42px;
+      }
+
+      .accordion-box {
+        padding-bottom: 40px;
       }
 
       .accordion-body {
         padding-bottom: 0px;
         padding-top: 0px;
+        margin-left: 58px;
       }
 
       .accordion-button {
@@ -953,6 +969,31 @@ main {
         &::after {
           content: none;
         }
+      }
+
+      .accordion-number {
+        height: 40px;
+        width: 40px;
+        border-radius: 20px;
+        border-width: 2px;
+        border-style: solid;
+        border-color: map-get($neutral-colors, 6);
+        box-shadow: 0 0 0 6px map-get($primary-colors, 'white');
+        align-content: center;
+        text-align: center;
+        margin-right: 18px;
+        font-size: 14px;
+        font-family: Gilroy, sans-serif;
+      }
+
+      .accordion-number img {
+        padding-bottom: 3px;
+      }
+
+      .accordion-number-active {
+        color: map-get($primary-colors, 'black')!important;
+        background-color: map-get($primary-colors, 'salmon');
+        border-style: none;
       }
     }
   }
