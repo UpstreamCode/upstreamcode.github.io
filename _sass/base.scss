@@ -1705,9 +1705,10 @@ main {
     }
 
     p.resource-topic {
+      font-family: 'Noto Sans Monospace', monospace;
       font-weight: 600;
       font-size: 16px;
-      text-transform: capitalize;
+      text-transform: uppercase;
       margin-bottom: 8px;
     }
 
