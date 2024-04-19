@@ -2025,6 +2025,55 @@ main {
       padding-bottom: 2px;
     }
 
+    img.resource-img {
+      border-radius: 20px;
+      width: 303px;
+      margin-top: 32px;
+      margin-bottom: 32px;
+
+      @include media-breakpoint-down(md) {
+        width: 240px;
+        margin-top: 0px;
+        margin-bottom: 0px;
+      }
+    }
+    
+    div.resource-detail {
+      margin-top: 32px;
+      margin-bottom: 32px;
+
+      @include media-breakpoint-down(md) {
+        margin-top: 24px;
+      }
+    }
+
+    p.resource-topic {
+      font-family: 'Noto Sans Monospace', monospace;
+      font-weight: 600;
+      font-size: 16px;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+
+    p.resource-title {
+      font-family: Gilroy, sans-serif;
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 32px;
+      margin-bottom: 8px;
+    }
+
+    p.resource-author {
+      font-weight: 600;
+      font-size: 16px;
+    }
+
+    p.resource-description {
+      font-weight: 400;
+      font-size: 15px;
+      line-height: 24px;
+    }
+
     .footnotes {
       font-family: 'Noto Sans', sans-serif;
       font-weight: 400;

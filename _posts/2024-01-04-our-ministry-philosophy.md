@@ -49,5 +49,5 @@ Upstream volunteers represent a broad range of Christian traditions, and we love
 
 [The Southgate statement![](/assets/images/icons/arrows/in-line-arrow-external.svg){: .img-in-line }](https://thesouthgatefellowship.org/#affirmations-and-denials){:target="_blank"}{:rel="noopener noreferrer"} is a wonderful document that takes the five solas of the reformation and works them out into principles for modern cross-cultural practice. Caleb (an Upstream founder) is a signatory. The affirmations and denials in the Southgate statement reflect the principles that steer our thinking about media engagement for the unreached.
 
-##### <sup>1</sup> [https://www.crosscon.com/beliefs/![](/assets/images/icons/arrows/in-line-arrow-external.svg){: .img-in-line }](https://www.crosscon.com/beliefs){:target="_blank"}{:rel="noopener noreferrer"}
+##### <sup>1</sup> [https://www.crosscon.com/beliefs/![](/assets/images/icons/arrows/in-line-arrow-external.svg){: .img-in-line }{:style="height: 14px;"}](https://www.crosscon.com/beliefs){:target="_blank"}{:rel="noopener noreferrer"}
 {: .footnotes}
