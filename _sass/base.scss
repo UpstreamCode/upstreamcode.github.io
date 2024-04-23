@@ -1901,7 +1901,8 @@ main {
 
     @include media-breakpoint-down(md) {
       gap: 0px;
-      margin-bottom: 80px;
+      margin-bottom: 48px;
+      margin-top: 132px;
     }
 
     .start-box {
@@ -1922,7 +1923,7 @@ main {
       }
 
       h1 {
-        margin-top: 0px;
+        margin: 0px;
       }
     }
 
@@ -1934,8 +1935,12 @@ main {
       }
 
       @include media-breakpoint-down(md) {
-        margin-top: 36px;
+        margin-top: 16px;
         max-width: none;
+
+        .lead {
+          font-size: 24px;
+        }
       }
     }
   }
@@ -1943,6 +1948,13 @@ main {
   #content-box-2 {
     padding: 0 44px;
     column-gap: 32px;
+    row-gap: 24px;
+    margin-bottom: 144px;
+
+    @include media-breakpoint-down(lg) {
+      padding: 0 20px;
+      margin-bottom: 80px;
+    }
 
     .q-card {
       background-color: white;
@@ -1951,13 +1963,28 @@ main {
       width: 100%;
       padding: 32px;
 
+      @include media-breakpoint-down(md) {
+        padding: 20px;
+      }
+
       p {
         font-family: Gilroy, sans-serif;
         font-weight: 700;
+        font-size: 24px;
+        margin: 0;
+
+        @include media-breakpoint-down(md) {
+          font-size: 20px;
+        }
       }
 
       p.question {
         color: map-get($secondary-colors, "blue");
+        padding-bottom: 16px;
+
+        @include media-breakpoint-down(md) {
+          padding-bottom: 8px;
+        }
       }
     }
   }
