@@ -6,3 +6,4 @@ vendor
 !/_sass/bootstrap/vendor/
 node_modules
 build.sh
+.vscode
