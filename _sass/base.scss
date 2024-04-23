@@ -1988,6 +1988,48 @@ main {
       }
     }
   }
+
+  #content-box-3 {
+    background-color: map-get($primary-colors, "black");
+    border-radius: 40px;
+    padding: 112.5px 128px;
+    margin: 0 44px;
+    margin-bottom: 128px;
+
+    @include media-breakpoint-down(lg) {
+      padding: 0 20px;
+      margin-bottom: 80px;
+    }
+
+    h2 {
+      color: map-get($primary-colors, "white");
+      margin: 0px;
+      text-align: center;
+    }
+
+    .values {
+      column-gap: 32px;
+      margin-top: 112px;
+
+      .value {
+        h3,
+        p {
+          color: map-get($primary-colors, "white");
+          margin: 0px;
+        }
+      }
+
+      h3 {
+        font-size: 18px;
+        padding-top: 16px;
+        padding-bottom: 8px;
+      }
+
+      p {
+        font-size: 16px;
+      }
+    }
+  }
 }
 
 /**
