@@ -2077,6 +2077,9 @@ main {
 
         img {
           max-height: 34px;
+          @include media-breakpoint-down(md) {
+            max-height: 30px;
+          }
         }
       }
     }
@@ -2084,6 +2087,10 @@ main {
 
   #content-box-5 {
     background-color: map-get($primary-colors, "white");
+    margin-bottom: 128px;
+    @include media-breakpoint-down(md) {
+      margin-bottom: 80px;
+    }
 
     .our-story {
       gap: 160px;
@@ -2108,7 +2115,6 @@ main {
       @include media-breakpoint-down(md) {
         gap: 0px;
         margin-bottom: 48px;
-        margin-top: 132px;
       }
 
       .start-box {
@@ -2134,11 +2140,53 @@ main {
 
         h1 {
           margin: 0px;
+          @include media-breakpoint-down(md) {
+            font-size: 28px;
+          }
         }
 
         @include media-breakpoint-down(md) {
           margin-top: 48px;
           max-width: none;
+        }
+      }
+    }
+  }
+
+  #content-box-6 {
+    @include media-breakpoint-down(lg) {
+      margin: 0 20px;
+    }
+
+    h2.heading {
+      text-align: center;
+      margin-top: 0;
+      margin-bottom: 48px;
+
+      @include media-breakpoint-down(md) {
+        text-align: left;
+      }
+    }
+
+    .faq {
+      max-width: 864px;
+      padding: 0 44px;
+      margin-bottom: 144px;
+
+      @include media-breakpoint-down(lg) {
+        padding: 0px;
+        margin-bottom: 80px;
+      }
+
+      p {
+        margin: 0;
+        @include media-breakpoint-down(md) {
+          font-size: 16px;
+        }
+      }
+      span.title {
+        @include media-breakpoint-down(md) {
+          font-size: 16px;
         }
       }
     }
