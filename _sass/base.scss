@@ -1997,7 +1997,7 @@ main {
     margin-bottom: 128px;
 
     @include media-breakpoint-down(lg) {
-      padding: 0 20px;
+      margin: 0 20px;
       margin-bottom: 80px;
     }
 
@@ -2038,6 +2038,46 @@ main {
 
       @include media-breakpoint-down(md) {
         margin-top: 48px;
+      }
+    }
+  }
+
+  #content-box-4 {
+    padding: 0 44px;
+    margin-bottom: 128px;
+    text-align: center;
+
+    @include media-breakpoint-down(lg) {
+      padding: 0 20px;
+      margin-bottom: 80px;
+    }
+
+    p {
+      margin: 0;
+    }
+
+    .partners {
+      column-gap: 32px;
+      row-gap: 16px;
+      margin-top: 48px;
+
+      .partner {
+        border-radius: 20px;
+        background-color: map-get($primary-colors, "white");
+        padding: 38px 20px;
+        flex-grow: 1;
+        display: flex;
+        justify-content: center;
+        max-width: 350px;
+
+        @include media-breakpoint-down(md) {
+          max-width: unset;
+          width: 100%;
+        }
+
+        img {
+          max-height: 34px;
+        }
       }
     }
   }
