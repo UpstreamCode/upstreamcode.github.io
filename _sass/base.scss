@@ -2001,6 +2001,12 @@ main {
       margin-bottom: 80px;
     }
 
+    @include media-breakpoint-down(md) {
+      margin: 80px 0;
+      padding: 88px 20px;
+      border-radius: 0;
+    }
+
     h2 {
       color: map-get($primary-colors, "white");
       margin: 0px;
@@ -2009,6 +2015,7 @@ main {
 
     .values {
       column-gap: 32px;
+      row-gap: 48px;
       margin-top: 112px;
 
       .value {
@@ -2027,6 +2034,10 @@ main {
 
       p {
         font-size: 16px;
+      }
+
+      @include media-breakpoint-down(md) {
+        margin-top: 48px;
       }
     }
   }
