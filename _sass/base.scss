@@ -653,18 +653,18 @@ blockquote {
 }
 
 .bg-mountain-valley {
-  /* stylelint-disable color-function-notation */
+  /* stylelint-disable color-function-notation,alpha-value-notation */
   background: linear-gradient(180deg, #F1EDEA 0%, rgba(255, 255, 255, 0.30) 22.47%, rgba(0, 0, 0, 0.20) 45.67%, #000 100%), url("images/mountain-valley.jpg");
-  /* stylelint-enable color-function-notation */
+  /* stylelint-enable color-function-notation,alpha-value-notation */
   background-position: bottom;
   background-repeat: no-repeat;
   background-size: cover;
   min-height: 600px;
 
   @include media-breakpoint-down(sm) {
-    /* stylelint-disable color-function-notation */
+    /* stylelint-disable color-function-notation,alpha-value-notation */
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.60) 0%, rgba(0, 0, 0, 0.60) 100%), url("images/mountain-valley.jpg");
-    /* stylelint-enable color-function-notation */
+    /* stylelint-enable color-function-notation,alpha-value-notation */
     background-position: bottom;
     background-repeat: no-repeat;
     background-size: cover;
@@ -2740,6 +2740,10 @@ footer {
       margin-bottom: 0px !important;
       margin-top: 16px;
       width: 300px;
+      
+      @include media-breakpoint-down(md) {
+        width: 100%;
+      }
     }
   }
 }
