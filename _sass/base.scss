@@ -589,7 +589,9 @@ blockquote {
 }
 
 .main-hero.home-hero {
-  background: linear-gradient(90deg, rgb(0 0 0 / 50%) 0%, rgb(0 0 0 / 50%) 0.01%, rgb(0 0 0 / 0%) 100%), url("images/woman-on-phone.jpg");
+  /* stylelint-disable color-function-notation, alpha-value-notation */
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 0.01%, rgba(0, 0, 0, 0) 100%), url("images/woman-on-phone.jpg");
+  /* stylelint-enable color-function-notation, alpha-value-notation */
   background-repeat: no-repeat;
   background-size: cover;
   background-position: right;
