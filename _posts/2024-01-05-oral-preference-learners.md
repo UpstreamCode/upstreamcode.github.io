@@ -47,4 +47,6 @@ The list goes on and on. The point is that over time we can grow to embed the wo
 
 Perhaps IKEA gets it right, after all. Apart from maddening frustration with their miniature allen wrenches, one has to admit that their instruction manuals are pretty rad. Everything is communicated through pictures, diagrams, and icons. IKEA isn’t thinking about oral preference learners, of course, but they’re able to get users from A to B without text. I think that we can learn a thing or two in this regard.
 
+<hr class="footnote-separator">
+
 [^1]: https://orality.net/about/who-are-oral-communicators/ (emphasis mine)

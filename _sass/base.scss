@@ -2419,6 +2419,15 @@ main {
     }
   }
 
+  .footnote-separator {
+    margin: 72px -72px;
+
+    @include media-breakpoint-down(md) {
+      margin: 24px 0px;
+    }
+
+  }
+
   #share-component {
     margin-bottom: 144px;
     margin-top: 72px;
