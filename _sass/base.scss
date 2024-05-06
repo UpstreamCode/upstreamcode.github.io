@@ -654,19 +654,22 @@ blockquote {
 
 .bg-mountain-valley {
   /* stylelint-disable color-function-notation */
-  background: linear-gradient(
-      to bottom,
-      #f1edea 0%,
-      rgba(255, 255, 255, 30%) 22.47%,
-      rgba(0, 0, 0, 20%) 45.67%,
-      #000 100%
-    ),
-    url("images/mountain-valley.jpg");
+  background: linear-gradient(180deg, #F1EDEA 0%, rgba(255, 255, 255, 0.30) 22.47%, rgba(0, 0, 0, 0.20) 45.67%, #000 100%), url("images/mountain-valley.jpg");
   /* stylelint-enable color-function-notation */
   background-position: bottom;
   background-repeat: no-repeat;
   background-size: cover;
   min-height: 600px;
+
+  @include media-breakpoint-down(sm) {
+    /* stylelint-disable color-function-notation */
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.60) 0%, rgba(0, 0, 0, 0.60) 100%), url("images/mountain-valley.jpg");
+    /* stylelint-enable color-function-notation */
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 600px;
+  }
 }
 
 .bg-yurts {
@@ -1431,6 +1434,7 @@ main {
     padding: 80px;
 
     @include media-breakpoint-down(md) {
+      padding: 36px 20px;
       min-height: 400px;
     }
 
@@ -1728,6 +1732,7 @@ main {
     padding: 80px;
 
     @include media-breakpoint-down(md) {
+      padding: 36px 20px;
       min-height: 400px;
     }
 
@@ -1865,6 +1870,7 @@ main {
     padding: 80px;
 
     @include media-breakpoint-down(md) {
+      padding: 36px 20px;
       min-height: 400px;
     }
 
