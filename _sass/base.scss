@@ -589,7 +589,7 @@ blockquote {
 }
 
 .main-hero.home-hero {
-  background: url("images/woman-on-phone.jpg");
+  background: linear-gradient(90deg, rgb(0 0 0 / 50%) 0%, rgb(0 0 0 / 50%) 0.01%, rgb(0 0 0 / 0%) 100%), url("images/woman-on-phone.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: right;
