@@ -1709,17 +1709,8 @@ main {
       object-fit: cover;
     }
 
-    .accordion-item {
-      margin-top: 16px;
-      border-radius: 15px;
-    }
-
-    .accordion-header {
-      margin-top: 16px;
-    }
-
     .accordion-button {
-      padding: 24px;
+      padding: 0px 24px;
       color: map-get($primary-colors, "black");
       background-color: transparent;
       font-family: Gilroy, sans-serif;
