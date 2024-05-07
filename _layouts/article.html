@@ -25,11 +25,11 @@
             <div id="share-component">
               <p class="sm-label">Share</p>
               <div class="d-flex justify-content-start flex-row gap-2">
-                {% include svgs/icons/social/facebook.svg %}
-                {% include svgs/icons/social/x.svg %}
-                {% include svgs/icons/social/linked-in.svg %}
-                {% include svgs/icons/social/link.svg %}
-                {% include svgs/icons/social/email.svg %}
+                <a href="#" data-sharer="facebook" data-url="{{ site.url }}{{ page.url }}">{% include svgs/icons/social/facebook.svg %}</a>
+                <a href="#" data-sharer="twitter" data-title="{{ page.title }}" data-url="{{ site.url }}{{ page.url }}">{% include svgs/icons/social/x.svg %}</a>
+                <a href="#" data-sharer="linkedin" data-url="{{ site.url }}{{ page.url }}">{% include svgs/icons/social/linked-in.svg %}</a>
+                <a href="#" class="clipboard" data-clipboard-text="{{ site.url }}{{ page.url }}">{% include svgs/icons/social/link.svg %}</a>
+                <a href="https://threads.net/intent/post?text={{ page.title }}" target="_blank">{% include svgs/icons/social/email.svg %}</a>
               </div>
             </div>
           </div>
@@ -66,9 +66,8 @@
         </div>
       </div>
     </main>
-
     {%- include footer.html -%}
-
+    <script src="https://cdn.jsdelivr.net/npm/sharer.js@latest/sharer.min.js"></script>
   </body>
 
 </html>

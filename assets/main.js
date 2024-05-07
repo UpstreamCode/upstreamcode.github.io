@@ -131,6 +131,23 @@ window.addEventListener('load', () => {
   for (let i = 0; i < dropdowns.length; i += 1) {
     dropdowns[i].addEventListener('click', (event) => onNavDropdownToggle(event), true);
   }
+  // eslint-disable-next-line no-undef
+  const clipboard = new ClipboardJS('.clipboard');
+  // eslint-disable-next-line no-undef
+  const tooltip = new bootstrap.Tooltip(document.querySelector('.clipboard'), {
+    title: 'Copied!',
+    trigger: 'manual',
+  });
+  clipboard.on('success', (e) => {
+    e.clearSelection();
+    tooltip.show();
+    setTimeout(() => {
+      tooltip.hide();
+    }, 2000);
+  });
+  document.querySelector('.clipboard').addEventListener('click', (e) => {
+    e.preventDefault();
+  });
 });
 /**
  * Add listener for scroll event
