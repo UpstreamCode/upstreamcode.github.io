@@ -813,11 +813,20 @@ main {
     }
 
     .accordion-body {
-      padding-bottom: 8px;
       padding-top: 8px;
 
       p {
-        padding-bottom: 0px;
+        padding-bottom: 8px;
+      }
+
+      ol {
+        margin-top: 16px;
+
+        li {
+          font-size: 18px;
+          line-height: 28px;
+          padding: 10px 0px;
+        }
       }
     }
 
@@ -2002,23 +2011,37 @@ main {
     @include media-breakpoint-down(lg) {
       margin: 0 20px;
       margin-bottom: 80px;
+      padding: 88px 20px;
     }
 
     @include media-breakpoint-down(md) {
       margin: 80px 0;
-      padding: 88px 20px;
       border-radius: 0;
+      padding: 88px 20px;
     }
 
-    h2 {
+    h2,
+    p {
       color: map-get($primary-colors, "white");
       margin: 0px;
       text-align: center;
+
+      @include media-breakpoint-down(md) {
+        text-align: left;
+      }
     }
+
+    p {
+      padding: 24px 0px 80px;
+
+      @include media-breakpoint-down(md) {
+        padding-bottom: 48px;
+      }
+    }
+
 
     .values {
       gap: 48px 32px;
-      margin-top: 112px;
 
       .value {
         h3,
@@ -2038,9 +2061,6 @@ main {
         font-size: 16px;
       }
 
-      @include media-breakpoint-down(md) {
-        margin-top: 48px;
-      }
     }
   }
 
