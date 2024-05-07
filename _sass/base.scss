@@ -2581,6 +2581,13 @@ main {
   }
 
   .carousel-control-prev {
+    opacity: 0.9;
+
+    &:hover,
+    &:focus {
+      opacity: 0.5;
+    }
+
     @include media-breakpoint-down(md) {
       bottom: 20px;
       top: auto;
@@ -2595,6 +2602,13 @@ main {
   }
 
   .carousel-control-next {
+    opacity: 0.9;
+
+    &:hover,
+    &:focus {
+      opacity: 0.5;
+    }
+
     @include media-breakpoint-down(md) {
       bottom: 20px;
       left: 58px;
