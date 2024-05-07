@@ -5,6 +5,7 @@ title: Upstream
 heading: Articles
 permalink: /articles/
 subheading: A community of developers innovating together to advance church planting efforts.
+image: assets/images/share-upstream-code.jpg
 ---
 <div id="articles-content" class="container-fluid">
   <div class="row">
@@ -16,8 +17,7 @@ subheading: A community of developers innovating together to advance church plan
           <div class="col-12 col-md-4{% if forloop.index > 3 %} margin-md-t-72{% endif %}">
             <div class="card h-100">
               <a href="{{ post.url }}" class="card-pic-link">
-                <img src="{{ "/assets/images/" | append:post.image | relative_url }}"
-                  alt="{{ post.image_alt }}">
+                <img src="{{ post.image | relative_url }}" alt="{{ post.image_alt }}">
               </a>
               <div class="card-body">
                 <p class="duration">{{ post.duration }}</p>

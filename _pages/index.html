@@ -8,6 +8,7 @@ title: Upstream
 heading: Coding for the Unreached
 permalink: /
 subheading: A community of developers innovating together to advance church planting efforts.
+image: assets/images/share-upstream-code.jpg
 ---
 
 <div id="home-content">
@@ -114,8 +115,7 @@ subheading: A community of developers innovating together to advance church plan
         <div class="col-12 col-md-4 col-xl-3">
           <div class="card h-100">
             <a href="{{ post.url }}" class="card-pic-link">
-              <img src="{{ "/assets/images/" | append:post.image | relative_url
-              }}" alt="{{ post.image_alt }}">
+              <img src="{{ post.image | relative_url }}" alt="{{ post.image_alt }}">
             </a>
             <div class="card-body">
               <p class="duration">{{ post.duration }}</p>

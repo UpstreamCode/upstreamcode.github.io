@@ -14,7 +14,7 @@
             <p class="duration">{{ page.duration }}</p>
             <h1>{{ page.title }}</h1>
             <p class="author{% if page.author == "" or page.author == nil %} d-none{% endif %}">By {{ page.author }}</p>
-            <img src="{{ "/assets/images/" | append:page.image | relative_url }}" alt="{{ page.image_alt }}" class="img-fluid">
+            <img src="{{ page.image | relative_url }}" alt="{{ page.image_alt }}" class="img-fluid">
           </div>
           <div class="d-none d-md-flex col-md-2"></div>
         </div>
@@ -49,7 +49,7 @@
                 <div class="col-12 col-md-4 m-margin-bottom">
                   <div class="card h-100">
                     <a href="{{ post.url }}" class="card-pic-link">
-                      <img src="{{ "/assets/images/" | append:post.image | relative_url }}"
+                      <img src="{{ post.image | relative_url }}"
                         alt="{{ post.image_alt }}">
                     </a>
                     <div class="card-body">

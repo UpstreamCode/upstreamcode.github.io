@@ -2,7 +2,7 @@
 author:
 duration: 4 Min Read
 excerpt: Ideally, people would have direct access to Scripture in their language, but that is not the reality of many unreached language groups...
-image: articles/feature-oral-preference-learners.jpg
+image: assets/images/articles/feature-oral-preference-learners.jpg
 image_alt: A man walking and talking on his phone.
 layout: article
 nav_state: transparent-dark
