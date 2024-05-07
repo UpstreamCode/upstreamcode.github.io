@@ -666,7 +666,7 @@ blockquote {
   background-size: cover;
   min-height: 600px;
 
-  @include media-breakpoint-down(sm) {
+  @include media-breakpoint-down(md) {
     /* stylelint-disable color-function-notation,alpha-value-notation */
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.60) 0%, rgba(0, 0, 0, 0.60) 100%), url("images/mountain-valley.jpg");
     /* stylelint-enable color-function-notation,alpha-value-notation */
@@ -692,6 +692,16 @@ blockquote {
   background-repeat: no-repeat;
   background-size: cover;
   min-height: 600px;
+
+  @include media-breakpoint-down(md) {
+    /* stylelint-disable color-function-notation,alpha-value-notation */
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.60) 0%, rgba(0, 0, 0, 0.60) 100%), url("images/yurts-valley.jpg");
+    /* stylelint-enable color-function-notation,alpha-value-notation */
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 600px;
+  }
 }
 
 /**
@@ -2296,9 +2306,16 @@ main {
         font-size: 28px;
         line-height: 36px;
         margin-bottom: 32px;
-        margin-top: 88px;
+        margin-top: 0px;
       }
     }
+
+    .accordion {
+      @include media-breakpoint-down(md) {
+        margin-top: 24px;
+      }
+    }
+
   }
 
   #support-hero {
@@ -2306,6 +2323,7 @@ main {
 
     @include media-breakpoint-down(md) {
       min-height: 400px;
+      padding: 80px 24px;
     }
 
     h2 {
