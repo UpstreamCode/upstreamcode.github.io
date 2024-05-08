@@ -37,7 +37,7 @@ There is now a common understanding in missions communities regarding “digital
 
 _While the views articulated below may not reflect the views of all those involved with Upstream, they nonetheless “chart the course” for our work by grounding us theologically and missiologically._
 
-Since doctrine always drives strategy (whether stated or unstated), we want to be upfront about our doctrinal distinctives. While we hold to our ministry agency's broad statement of faith, we also hold to the historical creeds (Apostle’s Creed and Nicene Creed) and confessions of the church (Westminster Standards).
+Since doctrine always drives strategy (whether stated or unstated), we want to be upfront about our doctrinal distinctives. We hold to the historical creeds (Apostle’s Creed and Nicene Creed) and confessions of the church (Westminster Standards).
 
 We believe that unity in Christ establishes and promotes healthy fellowship across denominational and doctrinal lines. A respected mission conference website puts it this way:
 
