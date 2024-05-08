@@ -1013,7 +1013,7 @@ main {
 
       .accordion-button {
         color: map-get($neutral-colors, 6);
-        font-family: "Noto Sans", sans-serif;
+        font-family: Gilroy, sans-serif;
         font-size: 20px;
         font-style: normal;
         font-weight: 700;
@@ -1032,6 +1032,10 @@ main {
         &::after {
           content: none;
         }
+      }
+
+      .accordion-body {
+        font-family: "Noto Sans", sans-serif;
       }
 
       .accordion-number {
