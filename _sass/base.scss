@@ -936,7 +936,7 @@ main {
 
     @include media-breakpoint-down(md) {
       min-height: 240px;
-      padding: 36px 20px;
+      padding: 36px calc(20px + #{$grid-gutter-width});
     }
 
     .hero-content {
@@ -955,7 +955,7 @@ main {
 
     @include media-breakpoint-down(md) {
       min-height: 240px;
-      padding: 36px 20px;
+      padding: 36px calc(20px + #{$grid-gutter-width});
     }
 
     .hero-content {
@@ -1165,6 +1165,7 @@ main {
 
       @include media-breakpoint-down(md) {
         margin-top: 30px;
+        padding: 20px calc(20px + #{$grid-gutter-width});
       }
     }
 
