@@ -1,6 +1,6 @@
 ---
 author:
-duration: 4 Min Read
+duration: 8 Min Read
 excerpt: SE attempts to capture the heartbeat of a theologically reflective, culturally thoughtful, and historical approach to content creation...
 image: assets/images/articles/feature-scripture-engagement.jpg
 image_alt: A person reading the Bible in a market.
