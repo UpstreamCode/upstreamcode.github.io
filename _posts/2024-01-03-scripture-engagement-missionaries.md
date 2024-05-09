@@ -1,8 +1,8 @@
 ---
 author:
-duration: 4 Min Read
+duration: 8 Min Read
 excerpt: SE attempts to capture the heartbeat of a theologically reflective, culturally thoughtful, and historical approach to content creation...
-image: articles/feature-scripture-engagement.jpg
+image: assets/images/articles/feature-scripture-engagement.jpg
 image_alt: A person reading the Bible in a market.
 layout: article
 nav_state: transparent-dark
@@ -61,6 +61,8 @@ We best apply today’s technology to mission when we use an inside-out approach
 In some cases, technical tools that already exist provide satisfactory solutions. Other times, gaps remain in digital distribution that can only be filled with more custom-built technology. Using a shared code base is one way to create more customizable apps without building them from scratch. 
 
 Missional technologists have much to offer to fill these gaps in the frontline work of communicating Christ in unreached contexts. Let us work together to write clean code that helps the gospel to spread in every corner of the globe. Let us offer our gifts in technology for the benefit of the nations.
+
+<hr class="footnote-separator">
 
 ##### <sup>1</sup> SIL thinks about SE this way. Their definition is “accessing, understanding and interacting meaningfully with the life-changing message of the Scriptures.” [https://www.sil.org/translation/scripture-engagement![](/assets/images/icons/arrows/in-line-arrow-external.svg){: .img-in-line}{:style="height: 14px;"}](https://www.sil.org/translation/scripture-engagement){:target="_blank"}{:rel="noopener noreferrer"} But I find that some missionaries, even within SIL, are confused about the meaning of SE. This is in part, I believe, because of the terminology. SE is often misunderstood as ways in which we can get people to read a Bible translation. I hope that the graphic above gives a better picture of what we mean by SE.
 {: .footnotes}

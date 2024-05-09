@@ -36,14 +36,14 @@ h6 {
 }
 
 h1 {
-  font-family: Gilroy-ExtraBold, sans-serif;
+  font-family: Gilroy, sans-serif;
   font-size: 48px;
+  font-weight: 800;
   line-height: 52px;
   margin-bottom: 24px;
   margin-top: 48px;
 
   @include media-breakpoint-down(sm) {
-    font-family: Gilroy-Bold, sans-serif;
     font-size: 36px;
     line-height: 44px;
     margin-bottom: 16px;
@@ -52,8 +52,9 @@ h1 {
 }
 
 h2 {
-  font-family: Gilroy-ExtraBold, sans-serif;
+  font-family: Gilroy, sans-serif;
   font-size: 34px;
+  font-weight: 800;
   line-height: 44px;
   margin-bottom: 24px;
   margin-top: 48px;
@@ -67,8 +68,9 @@ h2 {
 }
 
 h3 {
-  font-family: Gilroy-Bold, sans-serif;
+  font-family: Gilroy, sans-serif;
   font-size: 24px;
+  font-weight: 700;
   line-height: 32px;
   margin-bottom: 16px;
   margin-top: 32px;
@@ -82,8 +84,9 @@ h3 {
 }
 
 h4 {
-  font-family: Gilroy-Bold, sans-serif;
+  font-family: Gilroy, sans-serif;
   font-size: 18px;
+  font-weight: 700;
   line-height: 24px;
   margin-bottom: 8px;
   margin-top: 16px;
@@ -94,8 +97,9 @@ h4 {
 }
 
 h5 {
-  font-family: Gilroy-Bold, sans-serif;
+  font-family: Gilroy, sans-serif;
   font-size: 16px;
+  font-weight: 700;
   line-height: 24px;
   margin-bottom: 8px;
   margin-top: 16px;
@@ -106,8 +110,9 @@ h5 {
 }
 
 h6 {
-  font-family: Gilroy-Bold, sans-serif;
+  font-family: Gilroy, sans-serif;
   font-size: 12px;
+  font-weight: 700;
   letter-spacing: 0.8px;
   line-height: 16px;
   margin-bottom: 8px;
@@ -144,6 +149,10 @@ blockquote {
     font-weight: 400;
     line-height: 28px;
   }
+}
+
+input {
+  font-family: 'Noto Sans', sans-serif;
 }
 
 .author {
@@ -206,44 +215,59 @@ blockquote {
  */
 
 .fw-bold {
-  font-family: Gilroy-Bold, sans-serif;
+  font-family: Gilroy, sans-serif;
+  font-weight: 700;
 }
 
 .fst-italic {
-  font-family: Gilroy-Italic, sans-serif;
+  font-family: Gilroy, sans-serif;
+  font-style: italic;
 }
 
 .fw-bold .fst-italic {
-  font-family: Gilroy-BoldItalic, sans-serif;
+  font-family: Gilroy, sans-serif;
+  font-style: italic;
+  font-weight: 700;
 }
 
 .fw-bolder {
-  font-family: Gilroy-ExtraBold, sans-serif;
+  font-family: Gilroy, sans-serif;
+  font-weight: 900;
 }
 
 .fw-bolder .fst-italic {
-  font-family: Gilroy-ExtraBoldItalic, sans-serif;
+  font-family: Gilroy, sans-serif;
+  font-style: italic;
+  font-weight: 900;
 }
 
 .fw-light {
-  font-family: Gilroy-Light, sans-serif;
+  font-family: Gilroy, sans-serif;
+  font-weight: 300;
 }
 
 .fw-light .fst-italic {
-  font-family: Gilroy-LightItalic, sans-serif;
+  font-family: Gilroy, sans-serif;
+  font-style: italic;
+  font-weight: 300;
 }
 
 .fw-lighter {
-  font-family: Gilroy-Thin, sans-serif;
+  font-family: Gilroy, sans-serif;
+  font-weight: 100;
 }
 
 .fw-lighter .fst-italic {
-  font-family: Gilroy-ThinItalic, sans-serif;
+  font-family: Gilroy, sans-serif;
+  font-style: italic;
+  font-weight: 100;
 }
 
 .fw-normal,
 .fst-normal {
   font-family: Gilroy, sans-serif;
+  font-style: normal;
+  font-weight: 400;
 }
 
 .margin-md-t-72 {
@@ -589,17 +613,17 @@ blockquote {
 }
 
 .main-hero.home-hero {
-  background: url("images/woman-on-phone.jpg");
+  /* stylelint-disable color-function-notation, alpha-value-notation */
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 0.01%, rgba(0, 0, 0, 0) 100%), url("images/woman-on-phone.jpg");
+  /* stylelint-enable color-function-notation, alpha-value-notation */
   background-repeat: no-repeat;
   background-size: cover;
   background-position: right;
 
-  @include media-breakpoint-down(sm) {
-    padding-left: $spacer * 1 !important;
-  }
-
-  @include media-breakpoint-down(lg) {
-    padding-left: 70px !important;
+  @include media-breakpoint-up(md) {
+    @include media-breakpoint-down(lg) {
+      padding-left: 70px !important;
+    }
   }
 
   @include media-breakpoint-up(lg) {
@@ -648,23 +672,31 @@ blockquote {
   background-repeat: no-repeat;
   background-size: cover;
   min-height: 600px;
+
+  @include media-breakpoint-down(md) {
+    background-color: map-get($primary-colors, "black");
+    background-image: none;
+  }
 }
 
 .bg-mountain-valley {
-  /* stylelint-disable color-function-notation */
-  background: linear-gradient(
-      to bottom,
-      #f1edea 0%,
-      rgba(255, 255, 255, 30%) 22.47%,
-      rgba(0, 0, 0, 20%) 45.67%,
-      #000 100%
-    ),
-    url("images/mountain-valley.jpg");
-  /* stylelint-enable color-function-notation */
+  /* stylelint-disable color-function-notation,alpha-value-notation */
+  background: linear-gradient(180deg, #F1EDEA 0%, rgba(255, 255, 255, 0.30) 22.47%, rgba(0, 0, 0, 0.20) 45.67%, #000 100%), url("images/mountain-valley.jpg");
+  /* stylelint-enable color-function-notation,alpha-value-notation */
   background-position: bottom;
   background-repeat: no-repeat;
   background-size: cover;
   min-height: 600px;
+
+  @include media-breakpoint-down(md) {
+    /* stylelint-disable color-function-notation,alpha-value-notation */
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.60) 0%, rgba(0, 0, 0, 0.60) 100%), url("images/mountain-valley.jpg");
+    /* stylelint-enable color-function-notation,alpha-value-notation */
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 600px;
+  }
 }
 
 .bg-yurts {
@@ -682,6 +714,16 @@ blockquote {
   background-repeat: no-repeat;
   background-size: cover;
   min-height: 600px;
+
+  @include media-breakpoint-down(md) {
+    /* stylelint-disable color-function-notation,alpha-value-notation */
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.60) 0%, rgba(0, 0, 0, 0.60) 100%), url("images/yurts-valley.jpg");
+    /* stylelint-enable color-function-notation,alpha-value-notation */
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 600px;
+  }
 }
 
 /**
@@ -755,7 +797,7 @@ main {
   h3,
   h3 > a {
     color: map-get($primary-colors, "black");
-    font-family: Gilroy-SemiBold, sans-serif;
+    font-family: Gilroy, sans-serif;
     font-size: 18px;
     font-style: normal;
     font-weight: 700;
@@ -785,7 +827,7 @@ main {
 .accordion {
   &.accordion-white {
     h2 {
-      font-family: Gilroy-ExtraBold, sans-serif;
+      font-family: Gilroy, sans-serif;
       font-size: 18px;
       font-style: normal;
       font-weight: 700;
@@ -803,11 +845,21 @@ main {
     }
 
     .accordion-body {
-      padding-bottom: 8px;
       padding-top: 8px;
 
       p {
-        padding-bottom: 0px;
+        padding-bottom: 8px;
+      }
+
+      ol {
+        margin-top: 16px;
+
+        li {
+          font-family: "Noto Sans", sans-serif;
+          font-size: 18px;
+          line-height: 28px;
+          padding: 10px 0px;
+        }
       }
     }
 
@@ -879,11 +931,15 @@ main {
 
   .hero-one {
     min-height: 600px;
-    padding: 80px;
 
     @include media-breakpoint-down(md) {
       min-height: 240px;
-      padding: 36px 20px;
+      padding-top: 36px;
+      padding-bottom: 36px;
+    }
+
+    @include media-breakpoint-up(md) {
+      padding: 80px;
     }
 
     .hero-content {
@@ -898,11 +954,14 @@ main {
   }
 
   .hero-two {
-    padding: 80px;
-
     @include media-breakpoint-down(md) {
       min-height: 240px;
-      padding: 36px 20px;
+      padding-top: 36px;
+      padding-bottom: 36px;
+    }
+
+    @include media-breakpoint-up(md) {
+      padding: 80px;
     }
 
     .hero-content {
@@ -911,7 +970,6 @@ main {
 
       @include media-breakpoint-down(md) {
         border-right: none;
-        padding-right: 0px;
       }
     }
   }
@@ -926,13 +984,13 @@ main {
   padding-top: 144px;
 
   @include media-breakpoint-down(md) {
-    padding: 88px 20px 96px;
+    padding-top: 88px;
+    padding-bottom: 96px;
   }
 
   .content-box {
     @include media-breakpoint-down(md) {
       margin-top: 48px;
-      padding: 0px;
     }
 
     #process-accordion {
@@ -957,6 +1015,7 @@ main {
       }
 
       .accordion-body {
+        font-family: "Noto Sans", sans-serif;
         padding-bottom: 0px;
         padding-top: 0px;
         margin-left: 58px;
@@ -1104,10 +1163,11 @@ main {
 
     .content-box {
       margin-top: 120px;
-      padding: 20px;
+      padding-top: 24px;
 
       @include media-breakpoint-down(md) {
         margin-top: 30px;
+        padding-top: 16px;
       }
     }
 
@@ -1126,8 +1186,6 @@ main {
 
     @include media-breakpoint-down(md) {
       margin-top: 80px;
-      padding-left: 20px;
-      padding-right: 20px;
     }
 
     .start-image-box img {
@@ -1361,10 +1419,17 @@ main {
     .ways-to-serve {
       background-color: map-get($primary-colors, "black");
       border-radius: 40px;
-      padding: 128px 80px;
+      padding-bottom: 128px;
+      padding-top: 128px;
 
       @include media-breakpoint-down(md) {
-        padding: 88px $px-4-size 96px $px-4-size;
+        padding-bottom: 96px;
+        padding-top: 88px;
+      }
+
+      @include media-breakpoint-up(md) {
+        padding-bottom: 80px;
+        padding-top: 80px;
       }
 
       h2 {
@@ -1429,6 +1494,7 @@ main {
     padding: 80px;
 
     @include media-breakpoint-down(md) {
+      padding: 36px 20px;
       min-height: 400px;
     }
 
@@ -1545,10 +1611,15 @@ main {
     .a-common-need {
       background-color: map-get($primary-colors, "black");
       border-radius: 40px;
-      padding: 128px 80px;
 
       @include media-breakpoint-down(md) {
-        padding: 88px $px-4-size 96px $px-4-size;
+        padding-bottom: 80px;
+        padding-top: 80px;
+      }
+
+      @include media-breakpoint-up(md) {
+        padding-bottom: 96px;
+        padding-top: 88px;
       }
 
       h2 {
@@ -1563,7 +1634,7 @@ main {
       p {
         color: map-get($primary-colors, "white");
         font-family: "Noto Sans", sans-serif;
-        font-size: 16px;
+        font-size: 18px;
         font-style: normal;
         font-weight: 400;
         line-height: 24px;
@@ -1652,17 +1723,24 @@ main {
       }
     }
 
-    .feature-box {
-      padding: 0px 16px;
-
-      @include media-breakpoint-down(md) {
-        padding: 0px;
+    .feature-list {
+      @include media-breakpoint-up(md) {
+        padding-left: 184px;
+        padding-right: 184px;
       }
     }
+  
+    .item {
+      margin-bottom: 48px;
+      width: 100%;
 
-    .feature-row {
-      padding-left: 10%;
-      padding-right: 10%;
+      @include media-breakpoint-up(md) {
+        width: 33.33%;
+      }
+
+      img {
+        margin-bottom: 16px;
+      }
     }
 
     .feature-label {
@@ -1690,6 +1768,10 @@ main {
 
     .case-study {
       width: 100%;
+
+      @include media-breakpoint-down(md) {
+        margin-top: 32px;
+      }
     }
 
     .case-study-img {
@@ -1698,17 +1780,8 @@ main {
       object-fit: cover;
     }
 
-    .accordion-item {
-      margin-top: 16px;
-      border-radius: 15px;
-    }
-
-    .accordion-header {
-      margin-top: 16px;
-    }
-
     .accordion-button {
-      padding: 24px;
+      padding: 0px 24px;
       color: map-get($primary-colors, "black");
       background-color: transparent;
       font-family: Gilroy, sans-serif;
@@ -1726,6 +1799,7 @@ main {
     padding: 80px;
 
     @include media-breakpoint-down(md) {
+      padding: 36px 20px;
       min-height: 400px;
     }
 
@@ -1846,7 +1920,6 @@ main {
 
     .content-box {
       margin-top: 120px;
-      padding: 20px;
 
       @include media-breakpoint-down(md) {
         margin-top: 30px;
@@ -1863,6 +1936,7 @@ main {
     padding: 80px;
 
     @include media-breakpoint-down(md) {
+      padding: 36px 20px;
       min-height: 400px;
     }
 
@@ -1947,8 +2021,7 @@ main {
 
   #content-box-2 {
     padding: 0 44px;
-    column-gap: 32px;
-    row-gap: 24px;
+    gap: 24px 32px;
     margin-bottom: 144px;
 
     @include media-breakpoint-down(lg) {
@@ -1958,7 +2031,7 @@ main {
 
     .q-card {
       background-color: white;
-      border-radius: 32px;
+      border-radius: 20px;
       border-color: white;
       width: 100%;
       padding: 32px;
@@ -1999,30 +2072,44 @@ main {
     @include media-breakpoint-down(lg) {
       margin: 0 20px;
       margin-bottom: 80px;
+      padding: 88px 20px;
     }
 
     @include media-breakpoint-down(md) {
       margin: 80px 0;
-      padding: 88px 20px;
       border-radius: 0;
+      padding: 88px 20px;
     }
 
-    h2 {
+    h2,
+    p {
       color: map-get($primary-colors, "white");
       margin: 0px;
       text-align: center;
+
+      @include media-breakpoint-down(md) {
+        text-align: left;
+      }
     }
 
+    p {
+      padding: 24px 0px 80px;
+
+      @include media-breakpoint-down(md) {
+        padding-bottom: 48px;
+      }
+    }
+
+
     .values {
-      column-gap: 32px;
-      row-gap: 48px;
-      margin-top: 112px;
+      gap: 48px 32px;
 
       .value {
         h3,
         p {
           color: map-get($primary-colors, "white");
           margin: 0px;
+          text-align: left;
         }
       }
 
@@ -2036,9 +2123,6 @@ main {
         font-size: 16px;
       }
 
-      @include media-breakpoint-down(md) {
-        margin-top: 48px;
-      }
     }
   }
 
@@ -2057,8 +2141,7 @@ main {
     }
 
     .partners {
-      column-gap: 32px;
-      row-gap: 16px;
+      gap: 16px 32px;
       margin-top: 48px;
 
       .partner {
@@ -2077,9 +2160,11 @@ main {
 
         img {
           max-height: 34px;
+
           @include media-breakpoint-down(md) {
             max-height: 30px;
           }
+
         }
       }
     }
@@ -2088,6 +2173,7 @@ main {
   #content-box-5 {
     background-color: map-get($primary-colors, "white");
     margin-bottom: 128px;
+
     @include media-breakpoint-down(md) {
       margin-bottom: 80px;
     }
@@ -2128,6 +2214,7 @@ main {
 
       .end-box {
         max-width: 50%;
+
         p {
           margin-top: 16px;
           margin-bottom: 20px;
@@ -2140,9 +2227,11 @@ main {
 
         h1 {
           margin: 0px;
+
           @include media-breakpoint-down(md) {
             font-size: 28px;
           }
+
         }
 
         @include media-breakpoint-down(md) {
@@ -2180,14 +2269,18 @@ main {
 
       p {
         margin: 0;
+
         @include media-breakpoint-down(md) {
           font-size: 16px;
         }
+
       }
+
       span.title {
         @include media-breakpoint-down(md) {
           font-size: 16px;
         }
+
       }
     }
   }
@@ -2265,9 +2358,16 @@ main {
         font-size: 28px;
         line-height: 36px;
         margin-bottom: 32px;
-        margin-top: 88px;
+        margin-top: 0px;
       }
     }
+
+    .accordion {
+      @include media-breakpoint-down(md) {
+        margin-top: 24px;
+      }
+    }
+
   }
 
   #support-hero {
@@ -2275,6 +2375,7 @@ main {
 
     @include media-breakpoint-down(md) {
       min-height: 400px;
+      padding: 80px 20px;
     }
 
     h2 {
@@ -2402,6 +2503,15 @@ main {
       font-size: 14px;
       line-height: 24px;
     }
+  }
+
+  .footnote-separator {
+    margin: 72px -72px;
+
+    @include media-breakpoint-down(md) {
+      margin: 24px 0px;
+    }
+
   }
 
   #share-component {
@@ -2536,6 +2646,10 @@ main {
             line-height: 32px;
             margin-top: 32px;
           }
+
+          @include media-breakpoint-down(md) {
+            text-align: left;
+          }
         }
 
         .organization {
@@ -2552,6 +2666,13 @@ main {
   }
 
   .carousel-control-prev {
+    opacity: 0.9;
+
+    &:hover,
+    &:focus {
+      opacity: 0.5;
+    }
+
     @include media-breakpoint-down(md) {
       bottom: 20px;
       top: auto;
@@ -2566,6 +2687,13 @@ main {
   }
 
   .carousel-control-next {
+    opacity: 0.9;
+
+    &:hover,
+    &:focus {
+      opacity: 0.5;
+    }
+
     @include media-breakpoint-down(md) {
       bottom: 20px;
       left: 58px;
@@ -2585,17 +2713,24 @@ main {
   background-color: map-get($primary-colors, "white");
   border-radius: 40px;
   height: 100%;
-  padding: 85px 175px;
 
   @include media-breakpoint-down(md) {
     border-radius: 0px;
-    padding: 80px 20px;
+    padding-bottom: 80px;
+    padding-top: 80px;
+  }
+
+
+  @include media-breakpoint-up(md) {
+    border-radius: 0px;
+    padding: 85px 175px;
   }
 
   i.single-quote {
     @include media-breakpoint-down(md) {
       background-repeat: no-repeat;
       background-size: 48px 48px;
+      margin-left: 20px;
     }
   }
 
@@ -2613,6 +2748,10 @@ main {
       font-size: 24px;
       line-height: 32px;
       margin-top: 32px;
+    }
+
+    @include media-breakpoint-down(md) {
+      text-align: left;
     }
   }
 
@@ -2725,6 +2864,34 @@ footer {
       margin-bottom: 0px !important;
       margin-top: 16px;
       width: 300px;
+      
+      @include media-breakpoint-down(md) {
+        width: 100%;
+      }
     }
+  }
+}
+
+.text-page {
+  padding-top: 56px;
+
+  h1 {
+    text-align: center;
+  }
+}
+
+.px-mobile {
+  padding-left: 0px;
+  padding-right: 0px;
+
+  @include media-breakpoint-down(md) {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+}
+
+@include media-breakpoint-down(md) {
+  .container, .container-sm {
+      max-width: 100%;
   }
 }

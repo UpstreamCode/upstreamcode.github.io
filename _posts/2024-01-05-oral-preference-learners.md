@@ -2,7 +2,7 @@
 author:
 duration: 4 Min Read
 excerpt: Ideally, people would have direct access to Scripture in their language, but that is not the reality of many unreached language groups...
-image: articles/feature-oral-preference-learners.jpg
+image: assets/images/articles/feature-oral-preference-learners.jpg
 image_alt: A man walking and talking on his phone.
 layout: article
 nav_state: transparent-dark
@@ -46,5 +46,7 @@ I often find that designers and developers, of no fault of their own, create wit
 The list goes on and on. The point is that over time we can grow to embed the world of oral communicators into our DNA, such that our intuition becomes trained to design and develop with these end users in mind.
 
 Perhaps IKEA gets it right, after all. Apart from maddening frustration with their miniature allen wrenches, one has to admit that their instruction manuals are pretty rad. Everything is communicated through pictures, diagrams, and icons. IKEA isn’t thinking about oral preference learners, of course, but they’re able to get users from A to B without text. I think that we can learn a thing or two in this regard.
+
+<hr class="footnote-separator">
 
 [^1]: https://orality.net/about/who-are-oral-communicators/ (emphasis mine)

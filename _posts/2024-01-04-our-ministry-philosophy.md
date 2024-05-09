@@ -2,7 +2,7 @@
 author:
 duration: 4 Min Read
 excerpt: A ministry philosophy describes a group’s approach towards how they go about their ministry. It’s a look underneath the hood...
-image: articles/feature-bible.png
+image: assets/images/articles/feature-bible.png
 image_alt: A Bible with the pages blowing in the wind.
 layout: article
 nav_state: transparent-dark
@@ -37,7 +37,7 @@ There is now a common understanding in missions communities regarding “digital
 
 _While the views articulated below may not reflect the views of all those involved with Upstream, they nonetheless “chart the course” for our work by grounding us theologically and missiologically._
 
-Since doctrine always drives strategy (whether stated or unstated), we want to be upfront about our doctrinal distinctives. While we hold to Pioneers’ broad statement of faith, we also hold to the historical creeds (Apostle’s Creed and Nicene Creed) and confessions of the church (Westminster Standards). 
+Since doctrine always drives strategy (whether stated or unstated), we want to be upfront about our doctrinal distinctives. We hold to the historical creeds (Apostle’s Creed and Nicene Creed) and confessions of the church (Westminster Standards).
 
 We believe that unity in Christ establishes and promotes healthy fellowship across denominational and doctrinal lines. A respected mission conference website puts it this way:
 
@@ -48,6 +48,8 @@ Upstream volunteers represent a broad range of Christian traditions, and we love
 ## The Southgate Fellowship
 
 [The Southgate statement![](/assets/images/icons/arrows/in-line-arrow-external.svg){: .img-in-line }](https://thesouthgatefellowship.org/#affirmations-and-denials){:target="_blank"}{:rel="noopener noreferrer"} is a wonderful document that takes the five solas of the reformation and works them out into principles for modern cross-cultural practice. Caleb (an Upstream founder) is a signatory. The affirmations and denials in the Southgate statement reflect the principles that steer our thinking about media engagement for the unreached.
+
+<hr class="footnote-separator">
 
 ##### <sup>1</sup> [https://www.crosscon.com/beliefs/![](/assets/images/icons/arrows/in-line-arrow-external.svg){: .img-in-line }{:style="height: 14px;"}](https://www.crosscon.com/beliefs){:target="_blank"}{:rel="noopener noreferrer"}
 {: .footnotes}

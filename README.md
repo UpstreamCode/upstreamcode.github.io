@@ -4,7 +4,13 @@ The main website for Upstream Code.
 
 ## Development
 
-Set up developer environment: https://desiredpersona.com/install-jekyll-on-macos/.
+Set up developer environment: [Mac](https://desiredpersona.com/install-jekyll-on-macos/) | [Windows](https://jekyllrb.com/docs/installation/windows/).  Once installed, make sure you are using Ruby version 3.2.3.  Now install all the required libraries:
+
+```
+bundle install
+```
+
+Then you can start up the local server with: `bundle exec jekyll serve`.
 
 ### Code Quality
 
