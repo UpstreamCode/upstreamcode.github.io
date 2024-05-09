@@ -31,13 +31,15 @@ image: assets/images/share-upstream-code.jpg
 
   <div id="content-box-2" class="row">
     <div class="d-none d-md-flex col-md-3"></div>
-    <div class="col-12 col-md-6 px-4 px-md-0">
-      <p class="text-justify lead">
-        For several years on the field, Caleb managed a resource center in a
-        closed country. It housed thousands of printed books and materials.
-        Sadly, the majority of these resources remained on the shelves gathering
-        dust.
-      </p>
+    <div class="col-12 col-md-6">
+      <div class="px-mobile">
+        <p class="text-justify lead">
+          For several years on the field, Caleb managed a resource center in a
+          closed country. It housed thousands of printed books and materials.
+          Sadly, the majority of these resources remained on the shelves gathering
+          dust.
+        </p>
+      </div>
     </div>
     <div class="d-none d-md-flex col-md-1 col-lg-1"></div>
   </div>
@@ -48,7 +50,7 @@ image: assets/images/share-upstream-code.jpg
   >
     <div class="d-none d-md-flex col-md-1"></div>
     <div class="col-12 col-md-10 a-common-need">
-      <div class="d-flex flex-column flex-lg-row gap-3">
+      <div class="d-flex flex-column flex-lg-row gap-3 px-mobile">
         <div class="col d-flex flex-column align-items-start mb-2">
           <h2 class="text-center">A Common Need</h2>
           <p class="mb-4">
@@ -116,8 +118,8 @@ image: assets/images/share-upstream-code.jpg
     id="content-box-4"
     class="d-flex flex-md-row align-items-center justify-content-center"
   >
-    <div class="col col-12 col-md-10 justify-content-center">
-      <div class="row p-4">
+    <div class="col col-12 col-md-10 justify-content-center px-mobile">
+      <div class="row">
         <div class="col col-12 col-md-5 align-self-center justify-self-center">
           <div style="width: 100%">
             <div class="row flex-md-row justify-content-center">
@@ -174,131 +176,58 @@ image: assets/images/share-upstream-code.jpg
   </div>
 
   <div id="content-box-5">
-    <div class="row">
-      <div class="d-flex col col-12 justify-content-center">
-        <h2>Key Features</h2>
+    <div class="text-center">
+      <h2>Key Features</h2>
+    </div>
+    <div class="feature-list d-flex flex-column flex-md-row flex-wrap px-mobile">
+      <div class="item">
+        <img src="{{ "/assets/images/icons/phone.svg" | relative_url }}">
+        <p class="feature-label">Clean Interface</p>
+        <p class="feature-description">
+          Our interface is easy to use and navigate.
+        </p>
+      </div>
+      <div class="item">
+        <img src="{{ "/assets/images/icons/volume.svg" | relative_url }}">
+        <p class="feature-label">Audio-Based Navigation</p>
+        <p class="feature-description">
+          When navigating content, users can press a button to hear the
+          title of each story or chapter.
+        </p>
+      </div>
+      <div class="item">
+        <img src="{{ "/assets/images/icons/blue-ear.svg" | relative_url }}">
+        <p class="feature-label">Listen Anywhere</p>
+        <p class="feature-description">
+          Users can download and listen to audio files offline, wherever
+          they are.
+        </p>
+      </div>
+      <div class="item">
+        <img src="{{ "/assets/images/icons/globe.svg" | relative_url }}">
+        <p class="feature-label">Multilingual Support</p>
+        <p class="feature-description">
+          Users can switch languages for audio and/or text.
+        </p>
+      </div>
+      <div class="item">
+        <img src="{{ "/assets/images/icons/image.svg" | relative_url }}">
+        <p class="feature-label">Audio, Text, and Image</p>
+        <p class="feature-description">
+          OP supports any combination of audio, text, and image.
+        </p>
+      </div>
+      <div class="item">
+        <img src="{{ "/assets/images/icons/piece.svg" | relative_url }}">
+        <p class="feature-label">Customizable</p>
+        <p class="feature-description">
+          Teams can choose which features they want in order to suit the
+          needs of their language group.
+        </p>
       </div>
     </div>
-    <div class="row feature-row">
-      <div class="col col-12 col-md-4 justify-content-center">
-        <div class="row">
-          <div class="col col-12 p-4">
-            <img src="{{ "/assets/images/icons/phone.svg" | relative_url }}">
-          </div>
-        </div>
-        <div class="row">
-          <div class="col col-12 feature-box">
-            <p class="feature-label">Clean Interface</p>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col col-12 feature-box">
-            <p class="feature-description">
-              Our interface is easy to use and navigate.
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="col col-12 col-md-4 justify-content-center">
-        <div class="row">
-          <div class="col col-12 p-4">
-            <img src="{{ "/assets/images/icons/volume.svg" | relative_url }}">
-          </div>
-        </div>
-        <div class="row">
-          <div class="col col-12 feature-box">
-            <p class="feature-label">Audio-Based Navigation</p>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col col-12 feature-box">
-            <p class="feature-description">
-              When navigating content, users can press a button to hear the
-              title of each story or chapter.
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="col col-12 col-md-4 justify-content-center">
-        <div class="row">
-          <div class="col col-12 p-4">
-            <img src="{{ "/assets/images/icons/blue-ear.svg" | relative_url }}">
-          </div>
-        </div>
-        <div class="row">
-          <div class="col col-12 feature-box">
-            <p class="feature-label">Listen Anywhere</p>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col col-12 feature-box">
-            <p class="feature-description">
-              Users can download and listen to audio files offline, wherever
-              they are.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="row feature-row">
-      <div class="col col-12 col-md-4 justify-content-center">
-        <div class="row">
-          <div class="col col-12 p-4">
-            <img src="{{ "/assets/images/icons/globe.svg" | relative_url }}">
-          </div>
-        </div>
-        <div class="row">
-          <div class="col col-12 feature-box">
-            <p class="feature-label">Multilingual Support</p>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col col-12 feature-box">
-            <p class="feature-description">
-              Users can switch languages for audio and/or text.
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="col col-12 col-md-4 justify-content-center">
-        <div class="row">
-          <div class="col col-12 p-4">
-            <img src="{{ "/assets/images/icons/image.svg" | relative_url }}">
-          </div>
-        </div>
-        <div class="row">
-          <div class="col col-12 feature-box">
-            <p class="feature-label">Audio, Text, and Image</p>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col col-12 feature-box">
-            <p class="feature-description">
-              OP supports any combination of audio, text, and image.
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="col col-12 col-md-4 justify-content-center">
-        <div class="row">
-          <div class="col col-12 p-4">
-            <img src="{{ "/assets/images/icons/piece.svg" | relative_url }}">
-          </div>
-        </div>
-        <div class="row">
-          <div class="col col-12 feature-box">
-            <p class="feature-label">Customizable</p>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col col-12 feature-box">
-            <p class="feature-description">
-              Teams can choose which features they want in order to suit the
-              needs of their language group.
-            </p>
-          </div>
-        </div>
-      </div>
+    <div class="call-to-action text-center">
+      <a href="https://tally.so/r/me6EJo" target="_blank" rel="nofollow" class="btn btn-primary">Get Started {% include svgs/icons/arrows/arrow-external.svg %}</a>
     </div>
   </div>
   {%- include our-process.html -%} {%- include testimonials.html -%}
