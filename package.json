@@ -1,0 +1,19 @@
+{
+  "name": "dev.upstreamcode.github.io",
+  "version": "2.0.0",
+  "description": "A website for the Upstream Code community.",
+  "scripts": {
+    "lint": "npm run lint-js && npm run lint-style",
+    "lint-js": "eslint \"./assets/*.js\" --config .eslintrc.js",
+    "lint-style": "stylelint \"./_sass/*.scss\" --config .stylelintrc.json"
+  },
+  "author": "Upstream Code",
+  "devDependencies": {
+    "eslint": "^8.56.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.29.1",
+    "stylelint": "^16.1.0",
+    "stylelint-config-standard-scss": "^13.0.0",
+    "stylelint-scss": "^6.0.0"
+  }
+}

@@ -1,0 +1,75 @@
+/**
+ * Our custom variables
+ */
+$primary-colors: (
+  'black': #242526,
+  'cream': #F1F0EA,
+  'salmon': #FA8072,
+  'salmon-dark': #D1665D,
+  'white': #FFF,
+);
+$secondary-colors: (
+  'light-green': #85E0A3,
+  'blue': #4773AD,
+  'grey': #6D6D6D,
+);
+$semantic-colors: (
+  'autofill': #E3EEF5,
+  'error': #AD0322,
+  'information': #006BB2,
+  'success': #008738,
+  'warning': #FFA500,
+);
+$neutral-colors: (
+  1: #0A0A0A,
+  2: #141414,
+  3: #292929,
+  4: #3D3D3D,
+  5: #525252,
+  6: #707070,
+  7: #B8B8B8,
+  8: #CCC,
+  9: #E0E0E0,
+  10: #EAEAEA,
+  11: #F5F5F5,
+  12: #FAFAFA,
+);
+$primary-hover: map-get($primary-colors, 'salmon-dark');
+$navbar-height: 56px;
+
+/**
+ * Custom variables for Bootstrap
+ */
+$accordion-bg: map-get($primary-colors, 'white');
+$accordion-border-color: map-get($primary-colors, 'white');
+$accordion-button-bg: map-get($primary-colors, 'white');
+$accordion-button-active-bg: map-get($primary-colors, 'white');
+$btn-border-radius: 30px;
+$border-radius-sm: 30px;
+$border-radius-lg: 30px;
+$btn-font-color: map-get($primary-colors, 'black');
+$btn-padding-y: 12px;
+$btn-padding-x: 32px;
+$btn-padding-y-sm: 8px;
+$btn-padding-x-sm: 16px;
+$card-border-radius: 10px;
+$danger: map-get($semantic-colors, 'error');
+/* stylelint-disable */
+$dropdown-item-padding-x: 0px;
+$dropdown-item-padding-y: 0px;
+/* stylelint-enable */
+$dropdown-link-hover-bg: transparent;
+$font-family-base: 'Gilroy', sans-serif;
+$font-family-monospace: 'Noto Sans Mono', monospace;
+$info: map-get($semantic-colors, 'information');
+$input-border-color: map-get($neutral-colors, 8);
+$input-border-radius: 4px;
+$input-padding-y: 12px;
+$navbar-nav-link-padding-x: 20px;
+$nav-link-font-size: 16px;
+$nav-link-font-weight: 600;
+$navbar-light-color: map-get($neutral-colors, 1);
+$primary: map-get($primary-colors, 'salmon');
+$success: map-get($semantic-colors, 'success');
+$secondary-hover: map-get($primary-colors, 'salmon-dark');
+$warning: map-get($semantic-colors, 'warning');

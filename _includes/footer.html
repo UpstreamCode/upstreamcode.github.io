@@ -1,59 +1,60 @@
-<footer class="site-footer h-card">
-    <data class="u-url" href="{{ "/" | relative_url }}"></data>
-  
-    <div class="wrapper">
-  
-      <h2 class="footer-heading">{{ site.title | escape }}</h2>
-  
-      <div class="footer-col-wrapper">
-          
-        <div class="footer-col footer-col-1">
-          <ul class="contact-list">
-            <li class="p-name">
-              {%- if site.author -%}
-                {{ site.author | escape }}
-              {%- else -%}
-                {{ site.title | escape }}
-              {%- endif -%}
-              </li>
-              {%- if site.email -%}
-              <li><a class="u-email" href="mailto:{{ site.email }}">{{ site.email }}</a></li>
-              {%- endif -%}
-              <br>
-              {%- include social.html -%}
-          </ul>
-        </div>
-  
-        <div class="footer-col footer-col-2">
-            <p>{{- site.description | escape -}}</p>
-        </div>
-  
-        <div class="footer-col footer-col-3">
-          <!-- Begin Mailchimp Signup Form -->
-            <!-- <link href="//cdn-images.mailchimp.com/embedcode/horizontal-slim-10_7.css" rel="stylesheet" type="text/css"> -->
-            <style type="text/css">
-                #mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; width:100%;}
-                /* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
-                We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
-            </style>
-            <div id="mc_embed_signup">
-            <form action="https://github.us2.list-manage.com/subscribe/post?u=8846a4b70ef116f5364fff366&amp;id=c64490826b" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-                <div id="mc_embed_signup_scroll">
-                    <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required style="margin-bottom: 1em;">
-                    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-                    <div style="position: absolute; left: -5000px;" aria-hidden="true">
-                        <input type="text" name="b_8846a4b70ef116f5364fff366_c64490826b" tabindex="-1" value="">
-                    </div>
-                    <div class="clear">
-                    <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+<footer>
+    <div class="border-bottom">
+        <div class="container px-mobile">
+            <div id="newsletter-signup" class="d-flex flex-column flex-md-row justify-content-between align-items-start align-items-md-center">
+                <div class="me-0 me-md-3">
+                    <p class="text-nowrap">Join our email list.</p>
                 </div>
-            </form>
+                <div class="text-start text-md-end w-100 w-md-auto">
+                    <form action="https://github.us2.list-manage.com/subscribe/post?u=8846a4b70ef116f5364fff366&amp;id=c64490826b" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank" novalidate>
+                        <div class="d-flex flex-column flex-md-row w-100 w-md-auto">
+                            <div class="me-3 mt-3 mt-md-0 w-100 w-md-auto">
+                                <label for="mce-FNAME" class="visually-hidden">First Name</label>
+                                <input type="fname" value="" name="FNAME" id="mce-FNAME" placeholder="First Name" class="form-control" required>
+                            </div>
+                            <div class="me-3 mt-3 mt-md-0 w-100 w-md-auto">
+                                <label for="mce-EMAIL" class="visually-hidden">Email Address</label>
+                                <input type="email" value="" name="EMAIL" id="mce-EMAIL" placeholder="Email Address" class="form-control" required>
+                            </div>
+                            <div class="mt-3 mt-md-0 d-grid">
+                                <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                                <div style="position: absolute; left: -5000px;" aria-hidden="true">
+                                    <input type="text" name="b_8846a4b70ef116f5364fff366_c64490826b" tabindex="-1" value="">
+                                </div>
+                                <input type="submit" value="Sign Up" name="subscribe" id="mc-embedded-subscribe" class="btn btn-primary">
+                            </div>
+                        </div>
+                    </form>
+                </div>
             </div>
-
-        <!--End mc_embed_signup-->
         </div>
-      </div>
-  
     </div>
-  
-  </footer>
+    <div class="container px-mobile border-bottom">
+        <div id="org-details" class="d-flex flex-column flex-md-row justify-content-between">
+            <div>
+                <span class="org-logo">{% include svgs/logo-solid-bg.svg %}</span>
+                <p class="org-about">A community of technologists innovating together to advance church planting efforts in partnership with missionary teams.</p>
+            </div>
+            <div class="d-flex mt-3 mt-md-0">
+                <a href="/articles/" class="me-5 me-md-4">Articles</a>
+                <a href="/donate/">Donate</a>
+            </div>
+        </div>
+    </div>
+    <div id="footer-nav" class="px-mobile container d-flex flex-column flex-md-row justify-content-between align-items-start align-items-md-center">
+        <div class="d-flex flex-column flex-md-row justify-content-between align-items-start align-items-md-center gap-3">
+            <p>&copy; Upstream 2023. All Rights Reserved</p>
+            <div class="d-flex flex-row justify-content-between align-items-start align-items-md-center gap-3">
+                <a href="/privacy-policy/">Privacy Policy</a>
+                <a href="/terms-and-conditions/">Terms & Conditions</a>
+                <a href="/cookies-policy/">Cookies Policy</a>
+            </div>
+        </div>
+        <div class="d-flex justify-content-between align-items-start align-items-md-center gap-3 mt-3 mt-md-0">
+            <a href="https://tally.so/r/n0OgMQ" target="_blank" rel="nofollow">{% include svgs/icons/misc/envelope.svg %}</a>
+        </div>
+    </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script>
+<script src="{{ "/assets/main.js" | relative_url }}"></script>

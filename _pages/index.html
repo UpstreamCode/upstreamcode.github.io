@@ -1,0 +1,132 @@
+---
+# Feel free to add content and custom Front Matter to this file.
+# To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
+
+nav_state: transparent-light
+layout: default
+title: Upstream
+heading: Coding for the Unreached
+permalink: /
+subheading: A community of developers innovating together to advance church planting efforts.
+image: assets/images/share-upstream-code.jpg
+---
+
+<div id="home-content">
+  <div class="container-fluid">
+    <div class="text-start bg-image home-hero main-hero px-mobile">
+      <div
+        class="d-flex justify-content-start justify-content-sm-start align-items-end align-items-sm-center h-100"
+      >
+        <div class="hero-content">
+          <p class="tagline text-uppercase">
+            A community of developers, designers, and church planters
+          </p>
+          <h1>Digital Scripture Engagement for the Unreached</h1>
+          <form class="d-none d-sm-block">
+            <a href="/serve/" class="btn btn-primary">Serve</a>
+            <a href="/partner/" class="btn btn-outline btn-white-outline">Partner</a>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="container px-mobile">
+      <div class="mobile-action d-sm-none d-grid gap-2 mt-3">
+        <a href="/serve/" class="btn btn-primary">Serve</a>
+        <a href="/partner/" class="btn btn-outline btn-black-outline">Partner</a>
+      </div>
+    </div>
+    <div
+      id="content-box-1"
+      class="row justify-content-between align-items-center align-items-md-stretch"
+    >
+      <div class="start-image-box order-1 col-md-4">
+        <img src="{{ "/assets/images/man-walking-side-banner.png" | relative_url
+        }}" class="img-fluid" alt="Man walking on a beautiful day">
+      </div>
+      <div class="mobile-image-box order-2 col-12">
+        <img src="{{ "/assets/images/home-layered-image.png" | relative_url }}"
+        class="img-fluid" alt="Man walking on a beautiful day and person
+        drafting out a project">
+      </div>
+      <div
+        class="content-box margin-md-t-72 order-4 order-md-2 col-12 col-md-4"
+      >
+        <div class="px-mobile">
+          <p class="tagline">We’re a missional tech foundry</p>
+          <h2>Bridging the Gap Between Technologists and Frontline Missions</h2>
+          <p>
+            In an age where Himalayan monks can be seen with the latest iPhones,
+            Christians in the tech industry are still wondering how they can
+            meaningfully contribute to frontier missions.
+          </p>
+          <p>
+            We partner with missional technologists and field teams to help
+            advance church planting efforts among unreached language groups
+            (ULGs). Together, we create mobile apps that bring Scripture, oral
+            Bible stories, and music to ULGs.
+          </p>
+          <a href="/mission-and-values/" class="btn btn-primary">
+            Learn More
+          </a>
+        </div>
+      </div>
+      <div class="end-image-box order-3 order-md-3 col-md-4">
+        <img src="{{ "/assets/images/person-drafting-with-logo.png" |
+        relative_url }}" class="img-fluid d-none d-md-inline" alt="An outline of
+        the Upstream logo"> <img src="{{
+        "/assets/images/person-drafting-side-banner.png" | relative_url }}"
+        class="img-fluid d-inline d-md-none" alt="A person drafting out a
+        project">
+      </div>
+    </div>
+
+    <div id="content-box-2" class="col col-12 col-lg-10 justify-content-center px-mobile">
+      <div class="row align-items-center">
+        <div class="col col-12 col-md-6 col-lg-5 align-self-center justify-self-center">
+          <img src="{{ "/assets/images/lego-stack.png" | relative_url }}"
+        class="img-fluid" alt="A stack of bricks fitting nicely together">
+        </div>
+        <div class="d-none d-lg-flex col col-lg-1"></div>
+        <div class="col col-12 col-md-6 col-lg-5 content-box">
+          <p class="tagline">Our Solution</p>
+          <h2>Custom Apps for the Least of These</h2>
+          <p>
+            The unreached tend to receive less attention and resources. We’re
+            building mobile apps that are catered to specific language groups and
+            designing with their unique needs in mind. Our aim is to provide
+            simple, clear, and culturally appropriate ways for people to access
+            Scriptural content produced by locals and field teams.
+          </p>
+          <a href="/our-solution/" class="btn btn-primary">View Our Solution</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  {%- include testimonials.html -%} {%- include action-items.html -%}
+
+  <div id="articles-list">
+    <h2 class="text-center">Articles</h2>
+    <div class="container-fluid">
+      <div class="row justify-content-center">
+        {% for post in site.posts limit:3 %}
+        <div class="col-12 col-md-4 col-xl-3">
+          <div class="card h-100">
+            <a href="{{ post.url }}" class="card-pic-link">
+              <img src="{{ post.image | relative_url }}" class="card-img-top" alt="{{ post.image_alt }}">
+            </a>
+            <div class="card-body">
+              <p class="duration">{{ post.duration }}</p>
+              <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+              <p class="snippet">{{ post.excerpt }}</p>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+      <div class="d-flex justify-content-center">
+        <a href="/articles/" class="btn btn-primary">View All</a>
+      </div>
+    </div>
+  </div>
+</div>

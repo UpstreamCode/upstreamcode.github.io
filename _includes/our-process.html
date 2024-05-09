@@ -1,0 +1,242 @@
+<div
+  id="our-process-box"
+  class="row justify-content-between align-items-center"
+>
+  <div class="d-none d-md-flex col-md-1"></div>
+  <div class="start-image-box order-1 col-12 col-md-5 text-center text-md-left">
+    <div class="px-mobile">
+      <img src="{{ "/assets/images/lego-stack.png" | relative_url }}"
+    class="img-fluid" alt="A stack of bricks fitting nicely together">
+    </div>
+  </div>
+  <div class="content-box order-2 col-12 col-md-5">
+    <div class="px-mobile">
+      <p class="tagline mb-2">Our Process</p>
+      <h2 class="mt-1">From Idea to Reality</h2>
+      <div id="process-accordion" class="accordion">
+        <div class="accordion-item">
+          <div class="accordion-line"></div>
+          <div class="accordion-box">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapse-one"
+                aria-expanded="true"
+                aria-controls="collapse-one"
+                onclick="updateButtons(1)"
+              >
+                <span class="accordion-title" key="1">Initial Conversation</span>
+              </button>
+            </h2>
+            <div
+              id="collapse-one"
+              class="accordion-collapse collapse show"
+              data-bs-parent="#process-accordion"
+            >
+              <div class="accordion-body">
+                We want to get to know you and your ministry context.
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <div class="accordion-line"></div>
+          <div class="accordion-box">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapse-two"
+                aria-expanded="true"
+                aria-controls="collapse-two"
+                onclick="updateButtons(2)"
+              >
+                <span class="accordion-title" key="2">Clarify Requirements</span>
+              </button>
+            </h2>
+            <div
+              id="collapse-two"
+              class="accordion-collapse collapse"
+              data-bs-parent="#process-accordion"
+            >
+              <div class="accordion-body">
+                Together with you, we hone in on project goals and what’s needed
+                to get there.
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <div class="accordion-line"></div>
+          <div class="accordion-box">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapse-three"
+                aria-expanded="true"
+                aria-controls="collapse-three"
+                onclick="updateButtons(3)"
+              >
+                <span class="accordion-title" key="3">Make Drafts</span>
+              </button>
+            </h2>
+            <div
+              id="collapse-three"
+              class="accordion-collapse collapse"
+              data-bs-parent="#process-accordion"
+            >
+              <div class="accordion-body">
+                We produce designs of the app until they’re approved by you.
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <div class="accordion-line"></div>
+          <div class="accordion-box">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapse-four"
+                aria-expanded="true"
+                aria-controls="collapse-four"
+                onclick="updateButtons(4)"
+              >
+                <span class="accordion-title" key="4">Build and Test</span>
+              </button>
+            </h2>
+            <div
+              id="collapse-four"
+              class="accordion-collapse collapse"
+              data-bs-parent="#process-accordion"
+            >
+              <div class="accordion-body">
+                Our volunteer technologists start coding. We also test for any
+                problems.
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <div class="accordion-line"></div>
+          <div class="accordion-box">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapse-five"
+                aria-expanded="true"
+                aria-controls="collapse-five"
+                onclick="updateButtons(5)"
+              >
+                <span class="accordion-title" key="5">Launch</span>
+              </button>
+            </h2>
+            <div
+              id="collapse-five"
+              class="accordion-collapse collapse"
+              data-bs-parent="#process-accordion"
+            >
+              <div class="accordion-body">
+                We celebrate, give thanks, and pray as the app is made available
+                to the public.
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <div class="accordion-line" style="visibility: hidden"></div>
+          <div class="accordion-box">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapse-six"
+                aria-expanded="true"
+                aria-controls="collapse-six"
+                onclick="updateButtons(6)"
+              >
+                <span class="accordion-title" key="6">Refine</span>
+              </button>
+            </h2>
+            <div
+              id="collapse-six"
+              class="accordion-collapse collapse"
+              data-bs-parent="#process-accordion"
+            >
+              <div class="accordion-body">
+                Make adjustments based on user feedback and project goals.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="d-none d-md-flex col-md-1"></div>
+</div>
+<script>
+  /**
+   * This block iterates over all elements with the "accordion-title"
+   * class, giving each element a "number". The number is based on the
+   * "key" attribute of the "accordion-title", and will render with
+   * the "accordion-number" class. The first numbers will have the
+   * "accordion-number-active" class to distinguish from unselected
+   * numbers.
+   */
+  let accordionTitles = document.getElementsByClassName("accordion-title");
+  for (let i = 0; i < accordionTitles.length; i++) {
+    let accordionTitle = accordionTitles[i];
+    let numberCircle = document.createElement("span");
+    const key = accordionTitle.getAttribute("key");
+    const number = document.createTextNode(key);
+    numberCircle.appendChild(number);
+    numberCircle.classList.add("accordion-number");
+    numberCircle.setAttribute("key", key);
+    if (key === "1") {
+      numberCircle.classList.add("accordion-number-active");
+    }
+    accordionTitle.parentNode.insertBefore(numberCircle, accordionTitle);
+  }
+
+  /**
+   * Update the "accordion-number" elements so that the selected
+   * accordion button is shown as active, preceding buttons are shown
+   * as check-marks, and subsequent buttons show as un-read.
+   */
+  function updateButtons(keyStr) {
+    const key = parseInt(keyStr);
+    let accordionTitles = document.getElementsByClassName("accordion-title");
+    for (let i = 0; i < accordionTitles.length; i++) {
+      let accordionTitle = accordionTitles[i];
+      const parentElem = accordionTitle.parentElement;
+      for (let j = 0; j < accordionTitle.parentElement.childElementCount; j++) {
+        let childElem = parentElem.children[j];
+        if (childElem.className.includes("accordion-number")) {
+          const elemKey = parseInt(childElem.getAttribute("key"));
+          childElem.classList.remove("accordion-number-active");
+          if (elemKey <= key) {
+            childElem.classList.add("accordion-number-active");
+          }
+          if (elemKey < key) {
+            let check = document.createElement("img");
+            check.setAttribute("src", "/assets/images/icons/check.svg");
+            childElem.innerHTML = "";
+            childElem.appendChild(check);
+          } else {
+            childElem.innerHTML = elemKey;
+          }
+        }
+      }
+    }
+  }
+</script>
