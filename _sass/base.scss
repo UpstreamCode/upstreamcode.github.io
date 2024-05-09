@@ -151,6 +151,10 @@ blockquote {
   }
 }
 
+input {
+  font-family: 'Noto Sans', sans-serif;
+}
+
 .author {
   color: map-get($neutral-colors, 1);
   font-family: "Noto Sans", sans-serif;
