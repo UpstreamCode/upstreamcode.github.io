@@ -35,7 +35,7 @@ theme: null
 # Build settings
 plugins:
   - jekyll-feed
-  - jekyll-autoprefixer
+  # - jekyll-autoprefixer
 
 sass:
   sass_dir: _sass
