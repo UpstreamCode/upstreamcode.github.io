@@ -1015,6 +1015,7 @@ main {
       }
 
       .accordion-body {
+        font-family: "Noto Sans", sans-serif;
         padding-bottom: 0px;
         padding-top: 0px;
         margin-left: 58px;
@@ -1041,10 +1042,6 @@ main {
         &::after {
           content: none;
         }
-      }
-
-      .accordion-body {
-        font-family: "Noto Sans", sans-serif;
       }
 
       .accordion-number {
@@ -1725,6 +1722,7 @@ main {
         margin-bottom: 48px;
       }
     }
+
     .feature-list {
       @include media-breakpoint-up(md) {
         padding-left: 184px;
@@ -2891,6 +2889,7 @@ footer {
     padding-right: 20px !important;
   }
 }
+
 @include media-breakpoint-down(md) {
   .container, .container-sm {
       max-width: 100%;
