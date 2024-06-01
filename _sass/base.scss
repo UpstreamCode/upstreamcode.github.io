@@ -2568,7 +2568,7 @@ main {
       }
 
       a {
-        color: map-get($primary-colors, "salmon");
+        color: map-get($primary-colors, "salmon-dark");
         font-size: 14px;
         font-weight: 700;
         letter-spacing: 1px;
@@ -2580,7 +2580,7 @@ main {
           width: 20px;
 
           > path {
-            fill: map-get($primary-colors, "salmon");
+            fill: map-get($primary-colors, "salmon-dark");
           }
         }
 
