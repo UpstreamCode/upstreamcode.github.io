@@ -1007,7 +1007,7 @@ main {
         display: flex;
         border-left: solid 2px map-get($neutral-colors, 6);
         position: relative;
-        left: 42px;
+        left: 22px;
       }
 
       .accordion-box {
@@ -1016,9 +1016,9 @@ main {
 
       .accordion-body {
         font-family: "Noto Sans", sans-serif;
-        padding-bottom: 0px;
-        padding-top: 0px;
         margin-left: 58px;
+        padding:0;
+
       }
 
       .accordion-button {
@@ -1028,8 +1028,7 @@ main {
         font-style: normal;
         font-weight: 700;
         line-height: 28px;
-        padding-bottom: 0px;
-        padding-top: 0px;
+        padding:0;
 
         &:not(.collapsed) {
           color: map-get($primary-colors, "black");
@@ -2569,7 +2568,7 @@ main {
       }
 
       a {
-        color: map-get($primary-colors, "salmon");
+        color: map-get($primary-colors, "salmon-dark");
         font-size: 14px;
         font-weight: 700;
         letter-spacing: 1px;
@@ -2581,7 +2580,7 @@ main {
           width: 20px;
 
           > path {
-            fill: map-get($primary-colors, "salmon");
+            fill: map-get($primary-colors, "salmon-dark");
           }
         }
 
