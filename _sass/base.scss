@@ -1617,8 +1617,7 @@ main {
       }
 
       @include media-breakpoint-up(md) {
-        padding-bottom: 96px;
-        padding-top: 88px;
+        padding: 112.5px 128px;
       }
 
       h2 {
@@ -1646,6 +1645,11 @@ main {
           font-weight: 600;
           font-size: 48px;
           line-height: 64px;
+        }
+
+        &.stat-subtitle {
+          font-size: 14px;
+          line-height: 20px;
         }
 
         &.title {
