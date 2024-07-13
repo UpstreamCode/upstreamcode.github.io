@@ -1187,11 +1187,12 @@ main {
       margin-top: 80px;
     }
 
-    .start-image-box img {
-      max-height: 640px;
-
-      @include media-breakpoint-down(md) {
-        max-height: 340px;
+    .col-lg-5, .col-md-5 {
+      h2 {
+        padding-right: 30%;
+      }
+      p {
+        padding-right: 7%;
       }
     }
   }
@@ -1427,8 +1428,7 @@ main {
       }
 
       @include media-breakpoint-up(md) {
-        padding-bottom: 80px;
-        padding-top: 80px;
+        padding: 112.5px 128px;
       }
 
       h2 {
