@@ -1171,7 +1171,7 @@ main {
     }
 
     .end-image-box {
-      margin-top: 144px;
+      margin-top: 216px;
       text-align: right;
 
       @include media-breakpoint-down(md) {
@@ -1185,14 +1185,26 @@ main {
 
     @include media-breakpoint-down(md) {
       margin-top: 80px;
+
+      img {
+        margin-bottom: 48px;
+      }
     }
 
     .col-lg-5, .col-md-5 {
       h2 {
         padding-right: 30%;
+        
+        @include media-breakpoint-down(md) {
+          padding-right: 22%;
+        }
       }
       p {
         padding-right: 7%;
+
+        @include media-breakpoint-down(md) {
+          padding-right: 0;
+        }
       }
     }
   }
@@ -2679,6 +2691,7 @@ main {
     @include media-breakpoint-down(md) {
       bottom: 20px;
       top: auto;
+      left: 10px;
     }
 
     .carousel-control-prev-icon {
@@ -2699,7 +2712,7 @@ main {
 
     @include media-breakpoint-down(md) {
       bottom: 20px;
-      left: 58px;
+      left: 68px;
       top: auto;
     }
 
