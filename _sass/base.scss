@@ -914,6 +914,8 @@ main {
   }
 
   p {
+    font-size: 16px;
+    line-height: 24px;
     color: map-get($primary-colors, "white");
     margin-top: 0px;
 
@@ -962,6 +964,12 @@ main {
 
     @include media-breakpoint-up(md) {
       padding: 80px;
+    }
+
+    @include media-breakpoint-up(xl) {
+      .hero-content p {
+        padding-left: 5em;
+      }
     }
 
     .hero-content {
@@ -2108,7 +2116,7 @@ main {
     }
 
     p {
-      padding: 24px 0px 80px;
+      padding: 0px 0px 80px;
 
       @include media-breakpoint-down(md) {
         padding-bottom: 48px;
@@ -2130,12 +2138,14 @@ main {
 
       h3 {
         font-size: 18px;
+        line-height: 24px;
         padding-top: 16px;
         padding-bottom: 8px;
       }
 
       p {
         font-size: 16px;
+        line-height: 24px;
       }
 
     }
