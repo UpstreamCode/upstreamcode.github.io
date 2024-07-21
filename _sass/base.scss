@@ -40,6 +40,7 @@ h1 {
   font-size: 48px;
   font-weight: 800;
   line-height: 52px;
+  letter-spacing: -0.01em;
   margin-bottom: 24px;
   margin-top: 48px;
 
@@ -55,13 +56,14 @@ h2 {
   font-family: Gilroy, sans-serif;
   font-size: 34px;
   font-weight: 800;
-  line-height: 44px;
+  line-height: 40px;
+  letter-spacing: -0.01em;
   margin-bottom: 24px;
   margin-top: 48px;
 
   @include media-breakpoint-down(sm) {
     font-size: 28px;
-    line-height: 36px;
+    line-height: 34px;
     margin-bottom: 16px;
     margin-top: 32px;
   }
@@ -127,6 +129,7 @@ p {
   font-style: normal;
   font-weight: 400;
   line-height: 28px;
+  letter-spacing: -0.01em;
   margin-bottom: 24px;
 
   @include media-breakpoint-down(sm) {
@@ -193,8 +196,8 @@ input {
   font-size: 32px;
   font-style: normal;
   font-weight: 600;
-  letter-spacing: -0.3px;
-  line-height: 40px;
+  letter-spacing: -0.02em;
+  line-height: 38px;
   margin-bottom: 48px;
   margin-top: 48px;
 }
@@ -523,6 +526,10 @@ input {
     }
   }
 
+  .nav-serve {
+      margin-left: 20px;
+  }
+
   #mobile-secondary-nav {
     ul {
       display: flex;
@@ -558,9 +565,9 @@ input {
 }
 
 .btn-sm {
-  font-size: 13px;
-  line-height: 20px;
-  letter-spacing: 0.5px;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.8px;
 }
 
 .btn svg {
@@ -640,7 +647,7 @@ input {
     h1 {
       font-size: 64px;
       font-weight: 800;
-      letter-spacing: -0.5px;
+      letter-spacing: -1px;
       line-height: 72px;
       margin-top: 0px;
 
@@ -656,8 +663,9 @@ input {
 
     @include media-breakpoint-down(md) {
       h1 {
-        font-size: 48px;
-        line-height: 52px;
+        font-size: 40px;
+        line-height: 44px;
+        letter-spacing: -1px;
       }
     }
   }
@@ -2082,6 +2090,10 @@ main {
           padding-bottom: 8px;
         }
       }
+
+      p.answer {
+        font-weight: 600;
+      }
     }
   }
 
@@ -2104,10 +2116,13 @@ main {
       padding: 88px 20px;
     }
 
+    h2 {
+      margin-bottom: 24px;
+    }
+
     h2,
     p {
       color: map-get($primary-colors, "white");
-      margin: 0px;
       text-align: center;
 
       @include media-breakpoint-down(md) {
@@ -2116,6 +2131,7 @@ main {
     }
 
     p {
+      margin: 0px;
       padding: 0px 0px 80px;
 
       @include media-breakpoint-down(md) {
@@ -2448,14 +2464,30 @@ main {
   }
 
   .content {
+    h2 {
+      sup {
+        font-size: medium;
+        vertical-align: super;
+      }
+    }
+
     p.highlight {
       color: map-get($neutral-colors, 1);
       font-family: Gilroy, sans-serif;
-      font-size: 30px;
+      font-size: 24px;
       font-style: normal;
       font-weight: 500;
-      line-height: 40px;
+      line-height: 32px;
+      letter-spacing: -0.02em;
     }
+
+    p {
+      sup {
+        font-size: x-small;
+        vertical-align: super;
+      }
+    }
+    
 
     img {
       margin-bottom: 72px;
@@ -2499,13 +2531,15 @@ main {
       font-family: "Noto Sans Monospace", monospace;
       font-weight: 600;
       font-size: 16px;
+      line-height: 24px;
+      letter-spacing: 0.8px;
       text-transform: uppercase;
       margin-bottom: 8px;
     }
 
     p.resource-title {
       font-family: Gilroy, sans-serif;
-      font-weight: 700;
+      font-weight: 800;
       font-size: 24px;
       line-height: 32px;
       margin-bottom: 8px;
@@ -2514,6 +2548,7 @@ main {
     p.resource-author {
       font-weight: 600;
       font-size: 16px;
+      line-height: 24px;
     }
 
     p.resource-description {
