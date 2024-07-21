@@ -1,5 +1,5 @@
 ---
-author:
+author: D.B. Brown
 duration: 4 Min Read
 excerpt: A ministry philosophy describes a group’s approach towards how they go about their ministry. It’s a look underneath the hood...
 image: assets/images/articles/feature-bible.png
