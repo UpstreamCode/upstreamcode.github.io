@@ -135,6 +135,7 @@ p {
   @include media-breakpoint-down(sm) {
     font-size: 16px;
     line-height: 24px;
+    margin-bottom: 16px;
   }
 }
 
@@ -935,6 +936,14 @@ main {
     }
   }
 
+  .px-mobile {
+    .hero-content{
+      p {
+        margin-bottom: 20px;
+      }
+    }
+  }
+
   .hero-content button {
     margin-top: 36px;
   }
@@ -1095,14 +1104,14 @@ main {
   background-repeat: no-repeat;
   background-size: 1120px 732px;
   background-position: center;
-  padding-bottom: 95px;
-  padding-top: 95px;
+  padding-bottom: 96px;
+  padding-top: 96px;
 
   @include media-breakpoint-down(md) {
     background-image: none;
     padding-left: 20px;
     padding-right: 20px;
-    padding-top: 85px;
+    padding-top: 58px;
   }
 
   @include media-breakpoint-down(lg) {
@@ -1122,7 +1131,7 @@ main {
     margin-bottom: 35px;
 
     @include media-breakpoint-down(md) {
-      margin-bottom: 48px;
+      margin-bottom: 0px;
     }
 
     .col-12 {
@@ -1194,13 +1203,19 @@ main {
         display: none;
       }
     }
+
+    .px-mobile {
+      a.btn {
+        margin-top: 8px;
+      }
+    }
   }
 
   #content-box-2 {
     margin-top: 145px;
 
     @include media-breakpoint-down(md) {
-      margin-top: 80px;
+      margin-top: 38px;
 
       img {
         margin-bottom: 48px;
@@ -1222,6 +1237,11 @@ main {
           padding-right: 0;
         }
       }
+    }
+  }
+  #content-box-2.px-mobile {
+    a.btn {
+      margin-top: 8px;
     }
   }
 }
@@ -2679,7 +2699,7 @@ main {
 
           @include media-breakpoint-down(md) {
             border-radius: 0px;
-            padding: 80px 20px;
+            padding: 20px 20px 80px;
             width: 100%;
           }
         }
@@ -2736,7 +2756,7 @@ main {
     @include media-breakpoint-down(md) {
       bottom: 20px;
       top: auto;
-      left: 10px;
+      left: 12px;
     }
 
     .carousel-control-prev-icon {
@@ -2757,8 +2777,8 @@ main {
 
     @include media-breakpoint-down(md) {
       bottom: 20px;
-      left: 68px;
       top: auto;
+      left: 70px;
     }
 
     .carousel-control-next-icon {
@@ -2859,6 +2879,17 @@ footer {
 
   .border-bottom {
     border-bottom: 1px solid map-get($neutral-colors, 10) !important;
+
+    .px-mobile {
+      #newsletter-signup {
+        padding-top: 48px;
+        padding-bottom: 48px;
+
+        p {
+          font-size: 18px;
+        }
+      }
+    }
   }
 
   #newsletter-signup {
@@ -2913,6 +2944,10 @@ footer {
     font-weight: 600;
     padding-bottom: 48px;
     padding-top: 80px;
+
+    @include media-breakpoint-down(md) {
+      padding-top: 48px;
+    }
 
     .org-logo > svg {
       height: 32px;
