@@ -590,6 +590,7 @@ input {
 .btn:hover {
   background-color: $primary-hover !important;
   border-color: $primary-hover !important;
+  color: map-get($primary-colors, "black");
 }
 
 /**
@@ -627,6 +628,10 @@ input {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: right;
+
+  @include media-breakpoint-down(sm) {
+    background-position-x: 87%;
+  }
 
   @include media-breakpoint-up(md) {
     @include media-breakpoint-down(lg) {
@@ -1109,8 +1114,8 @@ main {
 
   @include media-breakpoint-down(md) {
     background-image: none;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 24px;
+    padding-right: 24px;
     padding-top: 58px;
   }
 
@@ -1164,6 +1169,16 @@ main {
  * Home Page
  */
 #home-content {
+  .hero-content {
+    a.btn-serve {
+      margin-right: 10px;
+      border: 2px solid map-get($primary-colors, "salmon");
+    }
+  }
+
+  .btn-serve-mobile {
+    border: 2px solid map-get($primary-colors, "salmon");
+  }
   #content-box-1 {
     @include media-breakpoint-down(md) {
       margin-top: 80px;
@@ -1214,6 +1229,12 @@ main {
   #content-box-2 {
     margin-top: 145px;
 
+    @include media-breakpoint-up(md) {
+      .content-box {
+        padding: 0px 2% 0px 3%;
+      }
+    }
+
     @include media-breakpoint-down(md) {
       margin-top: 38px;
 
@@ -1239,6 +1260,7 @@ main {
       }
     }
   }
+
   #content-box-2.px-mobile {
     a.btn {
       margin-top: 8px;
@@ -2699,7 +2721,7 @@ main {
 
           @include media-breakpoint-down(md) {
             border-radius: 0px;
-            padding: 20px 20px 80px;
+            padding: 20px 24px 80px;
             width: 100%;
           }
         }
@@ -2746,17 +2768,12 @@ main {
   }
 
   .carousel-control-prev {
-    opacity: 0.9;
-
-    &:hover,
-    &:focus {
-      opacity: 0.5;
-    }
+    opacity: 1;
 
     @include media-breakpoint-down(md) {
       bottom: 20px;
       top: auto;
-      left: 12px;
+      left: 16px;
     }
 
     .carousel-control-prev-icon {
@@ -2768,17 +2785,12 @@ main {
   }
 
   .carousel-control-next {
-    opacity: 0.9;
-
-    &:hover,
-    &:focus {
-      opacity: 0.5;
-    }
+    opacity: 1;
 
     @include media-breakpoint-down(md) {
       bottom: 20px;
       top: auto;
-      left: 70px;
+      left: 74px;
     }
 
     .carousel-control-next-icon {
@@ -2880,13 +2892,17 @@ footer {
   .border-bottom {
     border-bottom: 1px solid map-get($neutral-colors, 10) !important;
 
-    .px-mobile {
+    @include media-breakpoint-down(md) {
       #newsletter-signup {
         padding-top: 48px;
         padding-bottom: 48px;
 
         p {
           font-size: 18px;
+        }
+
+        .text-start {
+          width: 100% !important;
         }
       }
     }
@@ -2981,8 +2997,8 @@ footer {
   padding-right: 0px;
 
   @include media-breakpoint-down(md) {
-    padding-left: 20px !important;
-    padding-right: 20px !important;
+    padding-left: 24px !important;
+    padding-right: 24px !important;
   }
 }
 
