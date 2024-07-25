@@ -1434,9 +1434,11 @@ main {
       p {
         color: map-get($primary-colors, "white");
         margin-bottom: 36px;
+        padding-right: 60px;
 
         @include media-breakpoint-down(xl) {
           margin-bottom: 8px;
+          padding-right: 0px;
         }
 
         @include media-breakpoint-down(md) {
