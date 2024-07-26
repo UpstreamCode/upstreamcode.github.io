@@ -166,6 +166,7 @@ input {
   font-style: normal;
   font-weight: 400;
   line-height: 20px;
+  margin-bottom: 72px;
 }
 
 .duration {
@@ -2547,11 +2548,12 @@ main {
   .metadata {
     h1 {
       margin-bottom: 32px;
-      margin-top: 8px;
+      margin-top: 16px;
     }
 
     img {
       border-radius: 40px;
+      margin-bottom: 24px;
     }
   }
 
