@@ -801,6 +801,8 @@ main {
  * Cards
  */
 .card {
+  overflow: hidden;
+
   & > a > img {
     display: block;
     height: auto;
@@ -2442,16 +2444,25 @@ main {
  */
 #donate-content {
   #content-box-1 {
+    .tagline {
+      margin-bottom: 8px;
+    }
+
+    h1 {
+      margin-top: 0px;
+    }
+
     .end-box {
       text-align: left;
 
       img {
         border-bottom-left-radius: 80px;
-        height: 100%;
+        max-height: 830px;
 
         @include media-breakpoint-down(md) {
           border-bottom-left-radius: 0px;
           max-height: none;
+          width: 100%;
         }
       }
     }
@@ -2566,17 +2577,6 @@ main {
       sup {
         font-size: x-small;
         vertical-align: super;
-      }
-    }
-    
-
-    img {
-      margin-bottom: 72px;
-      margin-top: 72px;
-
-      @include media-breakpoint-down(md) {
-        margin-bottom: 0px;
-        margin-top: 0px;
       }
     }
 
