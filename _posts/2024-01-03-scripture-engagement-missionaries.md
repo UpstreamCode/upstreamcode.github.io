@@ -1,5 +1,5 @@
 ---
-author:
+author: D.B. Brown
 duration: 8 Min Read
 excerpt: SE attempts to capture the heartbeat of a theologically reflective, culturally thoughtful, and historical approach to content creation...
 image: assets/images/articles/feature-scripture-engagement.jpg
@@ -7,7 +7,7 @@ image_alt: A person reading the Bible in a market.
 layout: article
 nav_state: transparent-dark
 permalink: /articles/scripture-engagement-for-missionary-technologists/
-title: Scripture Engagement for Missionary-Technologists
+title: Scripture Engagement for Missional Technologists
 ---
 
 ## What Do We Mean by Scripture Engagement?

@@ -40,6 +40,7 @@ h1 {
   font-size: 48px;
   font-weight: 800;
   line-height: 52px;
+  letter-spacing: -0.01em;
   margin-bottom: 24px;
   margin-top: 48px;
 
@@ -55,13 +56,14 @@ h2 {
   font-family: Gilroy, sans-serif;
   font-size: 34px;
   font-weight: 800;
-  line-height: 44px;
+  line-height: 40px;
+  letter-spacing: -0.01em;
   margin-bottom: 24px;
   margin-top: 48px;
 
   @include media-breakpoint-down(sm) {
     font-size: 28px;
-    line-height: 36px;
+    line-height: 34px;
     margin-bottom: 16px;
     margin-top: 32px;
   }
@@ -127,11 +129,13 @@ p {
   font-style: normal;
   font-weight: 400;
   line-height: 28px;
+  letter-spacing: -0.01em;
   margin-bottom: 24px;
 
   @include media-breakpoint-down(sm) {
     font-size: 16px;
     line-height: 24px;
+    margin-bottom: 16px;
   }
 }
 
@@ -162,6 +166,7 @@ input {
   font-style: normal;
   font-weight: 400;
   line-height: 20px;
+  margin-bottom: 72px;
 }
 
 .duration {
@@ -193,8 +198,8 @@ input {
   font-size: 32px;
   font-style: normal;
   font-weight: 600;
-  letter-spacing: -0.3px;
-  line-height: 40px;
+  letter-spacing: -0.02em;
+  line-height: 38px;
   margin-bottom: 48px;
   margin-top: 48px;
 }
@@ -523,6 +528,12 @@ input {
     }
   }
 
+  .nav-serve {
+      @include media-breakpoint-up(lg) {
+        margin-left: 20px;  
+      }
+  }
+
   #mobile-secondary-nav {
     ul {
       display: flex;
@@ -558,9 +569,9 @@ input {
 }
 
 .btn-sm {
-  font-size: 13px;
-  line-height: 20px;
-  letter-spacing: 0.5px;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.8px;
 }
 
 .btn svg {
@@ -582,6 +593,7 @@ input {
 .btn:hover {
   background-color: $primary-hover !important;
   border-color: $primary-hover !important;
+  color: map-get($primary-colors, "black");
 }
 
 /**
@@ -620,6 +632,14 @@ input {
   background-size: cover;
   background-position: right;
 
+  @include media-breakpoint-down(sm) {
+    background-position: 87% 102% !important;
+    padding-bottom: 20px !important;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("images/woman-on-phone.jpg");
+    background-repeat: no-repeat;
+    background-size: 1052px;
+  }
+
   @include media-breakpoint-up(md) {
     @include media-breakpoint-down(lg) {
       padding-left: 70px !important;
@@ -640,24 +660,25 @@ input {
     h1 {
       font-size: 64px;
       font-weight: 800;
-      letter-spacing: -0.5px;
+      letter-spacing: -1px;
       line-height: 72px;
       margin-top: 0px;
 
-      @include media-breakpoint-down(sm) {
-        font-size: 36px;
+      @include media-breakpoint-down(md) {
+        font-size: 40px;
         line-height: 44px;
+      }
+
+      @include media-breakpoint-down(sm) {
+        margin-bottom: 0px;
       }
     }
 
     p {
       margin-bottom: 16px;
-    }
 
-    @include media-breakpoint-down(md) {
-      h1 {
-        font-size: 48px;
-        line-height: 52px;
+      @include media-breakpoint-down(sm) {
+        margin-bottom: 8px
       }
     }
   }
@@ -783,6 +804,8 @@ main {
  * Cards
  */
 .card {
+  overflow: hidden;
+
   & > a > img {
     display: block;
     height: auto;
@@ -834,21 +857,29 @@ main {
       line-height: 24px;
       margin-bottom: 0px;
       margin-top: 0px;
+
+      @include media-breakpoint-down(md) {
+        margin: 0px;
+      }
     }
 
     .accordion-item {
       background-color: map-get($primary-colors, "white");
       border-radius: 15px;
       margin-bottom: 16px;
-      padding-bottom: 36px;
-      padding-top: 36px;
+      padding: 36px 0px;
+
+      @include media-breakpoint-down(md) {
+        padding: 24px 0px;
+      }
     }
 
     .accordion-body {
       padding-top: 8px;
 
       p {
-        padding-bottom: 8px;
+        padding-bottom: 0px;
+        margin-bottom: 0px;
       }
 
       ol {
@@ -870,8 +901,7 @@ main {
       font-style: normal;
       font-weight: 700;
       line-height: 24px;
-      padding-bottom: 0px;
-      padding-top: 0px;
+      padding: 0px 24px;
 
       &:focus {
         box-shadow: none;
@@ -914,6 +944,8 @@ main {
   }
 
   p {
+    font-size: 16px;
+    line-height: 24px;
     color: map-get($primary-colors, "white");
     margin-top: 0px;
 
@@ -922,6 +954,16 @@ main {
       font-weight: 500;
       line-height: 16px;
       margin-bottom: 16px;
+    }
+  }
+
+  .hero-content {
+    p {
+      margin-bottom: 36px;
+
+      @include media-breakpoint-down(md) {
+        margin-bottom: 20px;
+      }
     }
   }
 
@@ -964,6 +1006,12 @@ main {
       padding: 80px;
     }
 
+    @include media-breakpoint-up(xl) {
+      .hero-content p {
+        padding-left: 5em;
+      }
+    }
+
     .hero-content {
       border-right: 1px solid map-get($secondary-colors, "grey");
       padding-right: 30px;
@@ -980,17 +1028,28 @@ main {
  */
 #our-process-box {
   background-color: map-get($primary-colors, "white");
-  padding-bottom: 144px;
   padding-top: 144px;
+  padding-bottom: 104px;
 
   @include media-breakpoint-down(md) {
     padding-top: 88px;
-    padding-bottom: 96px;
+    padding-bottom: 0px;
+  }
+
+  .start-image-box {
+    @include media-breakpoint-up(lg) {
+      margin-right: 100px;
+      padding: 0px;  
+    }
   }
 
   .content-box {
+    margin-top: 40px;
+    padding-left: 40px;
+
     @include media-breakpoint-down(md) {
       margin-top: 48px;
+      padding: 0px 14px;
     }
 
     #process-accordion {
@@ -1079,14 +1138,14 @@ main {
   background-repeat: no-repeat;
   background-size: 1120px 732px;
   background-position: center;
-  padding-bottom: 95px;
-  padding-top: 95px;
+  padding-bottom: 96px;
+  padding-top: 96px;
 
   @include media-breakpoint-down(md) {
     background-image: none;
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-top: 85px;
+    padding-left: 24px;
+    padding-right: 24px;
+    padding-top: 58px;
   }
 
   @include media-breakpoint-down(lg) {
@@ -1106,7 +1165,7 @@ main {
     margin-bottom: 35px;
 
     @include media-breakpoint-down(md) {
-      margin-bottom: 48px;
+      margin-bottom: 0px;
     }
 
     .col-12 {
@@ -1139,9 +1198,19 @@ main {
  * Home Page
  */
 #home-content {
+  .hero-content {
+    a.btn-serve {
+      margin-right: 10px;
+      border: 2px solid map-get($primary-colors, "salmon");
+    }
+  }
+
+  .btn-serve-mobile {
+    border: 2px solid map-get($primary-colors, "salmon");
+  }
   #content-box-1 {
     @include media-breakpoint-down(md) {
-      margin-top: 80px;
+      margin-top: 100px;
     }
 
     .start-image-box img {
@@ -1165,17 +1234,23 @@ main {
       padding-top: 24px;
 
       @include media-breakpoint-down(md) {
-        margin-top: 30px;
-        padding-top: 16px;
+        margin-top: 48px;
+        padding-top: 0px;
       }
     }
 
     .end-image-box {
-      margin-top: 144px;
+      margin-top: 216px;
       text-align: right;
 
       @include media-breakpoint-down(md) {
         display: none;
+      }
+    }
+
+    .px-mobile {
+      a.btn {
+        margin-top: 8px;
       }
     }
   }
@@ -1183,16 +1258,42 @@ main {
   #content-box-2 {
     margin-top: 145px;
 
-    @include media-breakpoint-down(md) {
-      margin-top: 80px;
+    @include media-breakpoint-up(md) {
+      .content-box {
+        padding: 0px 2% 0px 2%;
+      }
     }
 
-    .start-image-box img {
-      max-height: 640px;
+    @include media-breakpoint-down(md) {
+      margin-top: 38px;
+      margin-bottom: 80px;
 
-      @include media-breakpoint-down(md) {
-        max-height: 340px;
+      img {
+        margin-bottom: 48px;
       }
+    }
+
+    .col-lg-5, .col-md-5 {
+      h2 {
+        padding-right: 30%;
+        
+        @include media-breakpoint-down(md) {
+          padding-right: 22%;
+        }
+      }
+      p {
+        padding-right: 7%;
+
+        @include media-breakpoint-down(md) {
+          padding-right: 0;
+        }
+      }
+    }
+  }
+
+  #content-box-2.px-mobile {
+    a.btn {
+      margin-top: 8px;
     }
   }
 }
@@ -1250,6 +1351,13 @@ main {
     }
   }
 
+  .lead {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 32px;
+    margin: 32px 0px;
+  }
+
   .content {
     padding-top: 0px;
     padding-bottom: 72px;
@@ -1275,6 +1383,8 @@ main {
     }
 
     h2 {
+      margin: 0px;
+
       @include media-breakpoint-down(md) {
         margin-bottom: 48px;
         text-align: center;
@@ -1357,9 +1467,11 @@ main {
       p {
         color: map-get($primary-colors, "white");
         margin-bottom: 36px;
+        padding-right: 60px;
 
         @include media-breakpoint-down(xl) {
           margin-bottom: 8px;
+          padding-right: 0px;
         }
 
         @include media-breakpoint-down(md) {
@@ -1390,12 +1502,25 @@ main {
   }
 
   #content-box-2 {
+    padding-top: 170px;
     padding-bottom: 48px;
-    padding-top: 96px;
+
+    @include media-breakpoint-down(md) {
+      padding: 96px 10px 0px;
+    }
+
+    div.col-md-6 {
+      padding: 0px;
+    }
 
     p {
       margin-bottom: 0px;
       margin-top: 0px;
+
+      @include media-breakpoint-down(md) {
+        font-size: 24px;
+        line-height: 32px;
+      }
     }
   }
 
@@ -1404,6 +1529,19 @@ main {
 
     @include media-breakpoint-down(md) {
       padding-bottom: 80px;
+    }
+
+    .end-box {
+      .px-mobile {
+        @include media-breakpoint-down(md) {
+          padding: 0px !important;
+        }  
+      }
+    }
+
+    .content-box {
+      padding-right: 3%;
+      padding-left: 3%;
     }
   }
 
@@ -1427,8 +1565,7 @@ main {
       }
 
       @include media-breakpoint-up(md) {
-        padding-bottom: 80px;
-        padding-top: 80px;
+        padding: 112.5px 128px;
       }
 
       h2 {
@@ -1449,7 +1586,7 @@ main {
         font-weight: 400;
         line-height: 24px;
         margin-bottom: 0px;
-        margin-top: 0px;
+        margin-top: 8px;
 
         &.title {
           font-family: Gilroy, sans-serif;
@@ -1478,12 +1615,7 @@ main {
 
         @include media-breakpoint-down(md) {
           margin-top: 48px;
-        }
-      }
-
-      .m-margin-top {
-        @include media-breakpoint-down(md) {
-          margin-top: 48px;
+          text-align: left !important;
         }
       }
     }
@@ -1494,20 +1626,30 @@ main {
 
     @include media-breakpoint-down(md) {
       padding: 36px 20px;
-      min-height: 400px;
+      min-height: 280px;
     }
 
     h2 {
       color: map-get($primary-colors, "white");
       margin-top: 0px;
+      margin-bottom: 16px;
     }
 
     p {
       color: map-get($primary-colors, "white");
+      margin-bottom: 36px;
+      
+      @include media-breakpoint-up(xl) {
+        padding-right: 8em;
+      }
+
+      @include media-breakpoint-down(md) {
+        margin-bottom: 20px;
+      }
 
       &.tagline {
         color: map-get($secondary-colors, "light-green");
-        margin-bottom: 8px;
+        margin-bottom: 16px;
       }
     }
 
@@ -1560,6 +1702,10 @@ main {
       p {
         margin-top: 24px;
 
+        @include media-breakpoint-up(lg) {
+          padding-right: 75px;
+        }
+
         &.tagline {
           margin-top: 0px;
           margin-bottom: 8px;
@@ -1591,10 +1737,13 @@ main {
     letter-spacing: -0.3px;
     line-height: 40px;
     padding: 48px 0;
+    margin: 74px 0px 144px;
 
     @include media-breakpoint-down(md) {
       font-size: 24px;
-      line-height: 36px;
+      line-height: 32px;
+      margin: 80px 0px;
+      padding: 0px 12px;
       width: auto;
     }
   }
@@ -1617,17 +1766,12 @@ main {
       }
 
       @include media-breakpoint-up(md) {
-        padding-bottom: 96px;
-        padding-top: 88px;
+        padding: 112.5px 128px;
       }
 
       h2 {
         color: map-get($primary-colors, "white");
         margin-top: 0px;
-
-        @include media-breakpoint-down(md) {
-          margin-bottom: 48px;
-        }
       }
 
       p {
@@ -1646,6 +1790,11 @@ main {
           font-weight: 600;
           font-size: 48px;
           line-height: 64px;
+        }
+
+        &.stat-subtitle {
+          font-size: 14px;
+          line-height: 20px;
         }
 
         &.title {
@@ -1682,6 +1831,12 @@ main {
   #content-box-4 {
     margin-bottom: 72px;
 
+    .audio-bg-container {
+      @include media-breakpoint-up(lg) {
+        padding-left: 0px;  
+      }
+    }
+
     .audio-bg {
       background-color: map-get($primary-colors, "white");
       border-radius: 40px;
@@ -1703,11 +1858,19 @@ main {
     .audio-icon {
       max-width: 300px;
     }
+
+    .op-container {
+      @include media-breakpoint-up(lg) {
+        padding-left: 68px;
+        padding-right: 50px;
+      }
+    }
   }
 
   #content-box-5 {
     background-color: map-get($primary-colors, "white");
     padding-top: 128px;
+    padding: 128px 0px 96;
 
     @include media-breakpoint-down(md) {
       padding-top: 88px;
@@ -1735,6 +1898,11 @@ main {
 
       @include media-breakpoint-up(md) {
         width: 33.33%;
+        padding-right: 32px;
+      }
+
+      .feature-description {
+        margin-bottom: 0px;
       }
 
       img {
@@ -1759,10 +1927,16 @@ main {
   }
 
   #content-box-6 {
-    margin-bottom: 96px;
+    margin: 96px 0px 144px;
 
     @include media-breakpoint-down(md) {
-      padding: 20px;
+      padding: 0px 24px;
+      margin: 88px 0px 80px;
+    }
+
+    .case-study-title {
+      margin-top: 0px;
+      margin-bottom: 32px;
     }
 
     .case-study {
@@ -1790,7 +1964,11 @@ main {
     }
 
     .accordion-body {
-      padding: 24px;
+      padding: 16px 24px 0px;
+
+      .p-padding {
+        padding-bottom: 20px !important;
+      }
     }
   }
 
@@ -1835,10 +2013,19 @@ main {
 #partner-content {
   #question-hero p {
     color: map-get($primary-colors, "white");
+    margin-bottom: 36px;
+    
+    @include media-breakpoint-up(xl) {
+      padding-right: 8em;
+    }
+
+    @include media-breakpoint-down(md) {
+      margin-bottom: 20px;
+    }
 
     &.tagline {
       color: map-get($secondary-colors, "light-green");
-      margin-bottom: 8px;
+      margin-bottom: 16px;
     }
   }
 
@@ -1849,12 +2036,13 @@ main {
     font-weight: 600;
     letter-spacing: -0.3px;
     line-height: 40px;
-    width: 860px;
+    width: 864px;
 
     @include media-breakpoint-down(md) {
       font-size: 24px;
-      line-height: 36px;
+      line-height: 32px;
       width: auto;
+      margin-bottom: 0px;
     }
   }
 
@@ -1885,7 +2073,15 @@ main {
       }
 
       p {
-        margin-top: 24px;
+        margin-bottom: 36px;
+
+        @include media-breakpoint-up(xl) {
+          padding-right: 6%;
+        }
+
+        @include media-breakpoint-down(md) {
+          margin-bottom: 28px;
+        }
 
         &.tagline {
           margin-top: 0px;
@@ -1911,22 +2107,46 @@ main {
   }
 
   #content-box-2 {
-    padding: 48px 20px;
+    margin: 74px 0px;
+    padding: 48px;
+
+    @include media-breakpoint-down(md) {
+      margin: 80px 0px;
+      padding: 32px 48px;
+    }
   }
 
   #content-box-3 {
-    margin-bottom: 140px;
+    margin-bottom: 144px;
+
+    @include media-breakpoint-down(md) {
+      margin-bottom: 80px;
+    }
 
     .content-box {
-      margin-top: 120px;
+      margin-top: 100px;
 
       @include media-breakpoint-down(md) {
-        margin-top: 30px;
+        margin-top: 16px;
+      }
+
+      h2 {
+        @include media-breakpoint-up(lg) {
+          margin-top: 0px;
+        }
+      }
+
+      p {
+        margin-bottom: 32px;
+
+        @include media-breakpoint-down(md) {
+          margin-bottom: 20px;
+        }
       }
     }
 
     .end-image-box {
-      margin-top: 144px;
+      margin-top: 278px;
       text-align: right;
     }
   }
@@ -1935,23 +2155,24 @@ main {
     padding: 80px;
 
     @include media-breakpoint-down(md) {
-      padding: 36px 20px;
-      min-height: 400px;
+      padding: 36px 24px;
+      min-height: auto;
     }
 
     h2 {
       color: map-get($primary-colors, "white");
       margin-top: 0px;
+      margin-bottom: 16px;
     }
 
     .hero-content {
-      border-right: 1px solid map-get($secondary-colors, "grey");
+      border-left: 1px solid map-get($secondary-colors, "grey");
       max-width: 600px;
-      padding-right: 30px;
+      padding-left: 30px;
 
       @include media-breakpoint-down(md) {
-        border-right: none;
-        padding-right: 0px;
+        border-left: none;
+        padding-left: 0px;
       }
     }
   }
@@ -2013,6 +2234,7 @@ main {
 
         .lead {
           font-size: 24px;
+          line-height: 32px;
         }
       }
     }
@@ -2058,32 +2280,40 @@ main {
           padding-bottom: 8px;
         }
       }
+
+      p.answer {
+        font-weight: 600;
+      }
     }
   }
 
   #content-box-3 {
     background-color: map-get($primary-colors, "black");
     border-radius: 40px;
-    padding: 112.5px 128px;
+    padding: 112.5px;
     margin: 0 44px;
     margin-bottom: 128px;
 
     @include media-breakpoint-down(lg) {
       margin: 0 20px;
       margin-bottom: 80px;
-      padding: 88px 20px;
+      padding: 88px 24px;
     }
 
     @include media-breakpoint-down(md) {
       margin: 80px 0;
       border-radius: 0;
-      padding: 88px 20px;
+      padding: 88px 24px 64px;
+    }
+
+    h2 {
+      margin-top: 0px;
+      margin-bottom: 24px;
     }
 
     h2,
     p {
       color: map-get($primary-colors, "white");
-      margin: 0px;
       text-align: center;
 
       @include media-breakpoint-down(md) {
@@ -2092,7 +2322,8 @@ main {
     }
 
     p {
-      padding: 24px 0px 80px;
+      margin: 0px;
+      padding: 0px;
 
       @include media-breakpoint-down(md) {
         padding-bottom: 48px;
@@ -2101,7 +2332,12 @@ main {
 
 
     .values {
-      gap: 48px 32px;
+      margin-top: 48px;
+      gap: 0px 32px;
+
+      @include media-breakpoint-down(md) {
+        margin-top: 0px;
+      }
 
       .value {
         h3,
@@ -2114,12 +2350,14 @@ main {
 
       h3 {
         font-size: 18px;
+        line-height: 24px;
         padding-top: 16px;
         padding-bottom: 8px;
       }
 
       p {
         font-size: 16px;
+        line-height: 24px;
       }
 
     }
@@ -2131,7 +2369,7 @@ main {
     text-align: center;
 
     @include media-breakpoint-down(lg) {
-      padding: 0 20px;
+      padding: 0 24px;
       margin-bottom: 80px;
     }
 
@@ -2178,8 +2416,8 @@ main {
     }
 
     .our-story {
-      gap: 160px;
-      padding: 144px 44px;
+      gap: 80px;
+      padding: 144px 72px;
 
       img {
         aspect-ratio: 1;
@@ -2215,8 +2453,7 @@ main {
         max-width: 50%;
 
         p {
-          margin-top: 16px;
-          margin-bottom: 20px;
+          margin-bottom: 32px;
 
           &.tagline {
             margin-top: 0px;
@@ -2230,7 +2467,10 @@ main {
           @include media-breakpoint-down(md) {
             font-size: 28px;
           }
+        }
 
+        h2 {
+          margin-top: 0px;
         }
 
         @include media-breakpoint-down(md) {
@@ -2243,7 +2483,7 @@ main {
 
   #content-box-6 {
     @include media-breakpoint-down(lg) {
-      margin: 0 20px;
+      margin: 0 24px;
     }
 
     h2.heading {
@@ -2264,6 +2504,10 @@ main {
       @include media-breakpoint-down(lg) {
         padding: 0px;
         margin-bottom: 80px;
+      }
+
+      .accordion-body {
+        padding: 16px 24px 0px;
       }
 
       p {
@@ -2294,7 +2538,7 @@ main {
 
   @include media-breakpoint-down(md) {
     padding-top: 64px;
-    padding-bottom: 80px;
+    padding-bottom: 0px;
   }
 
   h1 {
@@ -2319,16 +2563,32 @@ main {
  */
 #donate-content {
   #content-box-1 {
+    .tagline {
+      margin-bottom: 8px;
+    }
+
+    h1 {
+      margin-top: 0px;
+    }
+
+    p {
+      margin-bottom: 28px;
+    }
+
+    .start-box {
+      padding-top: 36px;
+    }
     .end-box {
       text-align: left;
 
       img {
         border-bottom-left-radius: 80px;
-        height: 100%;
+        max-height: 830px;
 
         @include media-breakpoint-down(md) {
           border-bottom-left-radius: 0px;
           max-height: none;
+          width: 100%;
         }
       }
     }
@@ -2340,7 +2600,7 @@ main {
 
     @include media-breakpoint-down(md) {
       margin-bottom: 96px;
-      margin-top: 80px;
+      margin-top: 88px;
     }
 
     h2.heading {
@@ -2363,7 +2623,12 @@ main {
 
     .accordion {
       @include media-breakpoint-down(md) {
-        margin-top: 24px;
+        margin-top: 32px;
+      }
+
+      .accordion-body {
+        padding-left: 24px;
+        padding-right: 24px;
       }
     }
 
@@ -2374,7 +2639,7 @@ main {
 
     @include media-breakpoint-down(md) {
       min-height: 400px;
-      padding: 80px 20px;
+      padding: 92px 24px;
     }
 
     h2 {
@@ -2384,6 +2649,7 @@ main {
 
     p {
       color: map-get($primary-colors, "white");
+      margin-bottom: 20px;
     }
 
     .hero-content {
@@ -2412,32 +2678,61 @@ main {
 
   .metadata {
     h1 {
+      margin-top: 16px;
       margin-bottom: 32px;
-      margin-top: 8px;
+
+      @include media-breakpoint-down(md) {
+        margin-top: 8px;
+        margin-bottom: 24px;
+      }
+    }
+
+    .author {
+      @include media-breakpoint-down(md) {
+        margin-bottom: 48px;
+      }
     }
 
     img {
       border-radius: 40px;
+      margin-bottom: 72px;
+
+      @include media-breakpoint-down(md) {
+        margin-bottom: 48px;
+      }
     }
   }
 
   .content {
+    h2 {
+      sup {
+        font-size: medium;
+        vertical-align: super;
+      }
+    }
+
+    #what-do-we-mean-by-scripture-engagement {
+      margin-top: 0px;
+    }
+
+    #learn-with-us-title {
+      margin-top: 0px;
+    }
+
     p.highlight {
       color: map-get($neutral-colors, 1);
       font-family: Gilroy, sans-serif;
-      font-size: 30px;
+      font-size: 24px;
       font-style: normal;
       font-weight: 500;
-      line-height: 40px;
+      line-height: 32px;
+      letter-spacing: -0.02em;
     }
 
-    img {
-      margin-bottom: 72px;
-      margin-top: 72px;
-
-      @include media-breakpoint-down(md) {
-        margin-bottom: 0px;
-        margin-top: 0px;
+    p {
+      sup {
+        font-size: x-small;
+        vertical-align: super;
       }
     }
 
@@ -2473,13 +2768,15 @@ main {
       font-family: "Noto Sans Monospace", monospace;
       font-weight: 600;
       font-size: 16px;
+      line-height: 24px;
+      letter-spacing: 0.8px;
       text-transform: uppercase;
       margin-bottom: 8px;
     }
 
     p.resource-title {
       font-family: Gilroy, sans-serif;
-      font-weight: 700;
+      font-weight: 800;
       font-size: 24px;
       line-height: 32px;
       margin-bottom: 8px;
@@ -2488,6 +2785,7 @@ main {
     p.resource-author {
       font-weight: 600;
       font-size: 16px;
+      line-height: 24px;
     }
 
     p.resource-description {
@@ -2601,7 +2899,7 @@ main {
   position: relative;
 
   @include media-breakpoint-down(md) {
-    margin-top: 80px;
+    margin-top: 0px;
   }
 
   .carousel {
@@ -2618,7 +2916,7 @@ main {
 
           @include media-breakpoint-down(md) {
             border-radius: 0px;
-            padding: 80px 20px;
+            padding: 80px 24px 160px;
             width: 100%;
           }
         }
@@ -2636,7 +2934,7 @@ main {
           font-size: 34px;
           font-style: normal;
           font-weight: 500;
-          line-height: 56px;
+          line-height: 51px;
           margin-top: 50px;
           text-align: center;
 
@@ -2665,16 +2963,12 @@ main {
   }
 
   .carousel-control-prev {
-    opacity: 0.9;
-
-    &:hover,
-    &:focus {
-      opacity: 0.5;
-    }
+    opacity: 1;
 
     @include media-breakpoint-down(md) {
-      bottom: 20px;
+      bottom: 12%;
       top: auto;
+      left: 16px;
     }
 
     .carousel-control-prev-icon {
@@ -2686,17 +2980,12 @@ main {
   }
 
   .carousel-control-next {
-    opacity: 0.9;
-
-    &:hover,
-    &:focus {
-      opacity: 0.5;
-    }
+    opacity: 1;
 
     @include media-breakpoint-down(md) {
-      bottom: 20px;
-      left: 58px;
+      bottom: 12%;
       top: auto;
+      left: 74px;
     }
 
     .carousel-control-next-icon {
@@ -2721,7 +3010,6 @@ main {
 
 
   @include media-breakpoint-up(md) {
-    border-radius: 0px;
     padding: 85px 175px;
   }
 
@@ -2751,6 +3039,7 @@ main {
 
     @include media-breakpoint-down(md) {
       text-align: left;
+      margin-bottom: 32px;
     }
   }
 
@@ -2762,6 +3051,10 @@ main {
     font-weight: 400;
     line-height: 24px;
     text-align: center;
+
+    @include media-breakpoint-down(md) {
+      text-align: left;
+    }
   }
 }
 
@@ -2769,12 +3062,6 @@ main {
   @include media-breakpoint-down(md) {
     background-color: map-get($primary-colors, "white");
     margin-top: 0px;
-  }
-
-  .carousel .carousel-inner .carousel-item > div {
-    @include media-breakpoint-down(md) {
-      padding: 0px 20px 80px;
-    }
   }
 }
 
@@ -2797,6 +3084,21 @@ footer {
 
   .border-bottom {
     border-bottom: 1px solid map-get($neutral-colors, 10) !important;
+
+    @include media-breakpoint-down(md) {
+      #newsletter-signup {
+        padding-top: 48px;
+        padding-bottom: 48px;
+
+        p {
+          font-size: 18px;
+        }
+
+        .text-start {
+          width: 100% !important;
+        }
+      }
+    }
   }
 
   #newsletter-signup {
@@ -2852,6 +3154,10 @@ footer {
     padding-bottom: 48px;
     padding-top: 80px;
 
+    @include media-breakpoint-down(md) {
+      padding-top: 48px;
+    }
+
     .org-logo > svg {
       height: 32px;
       width: 153px;
@@ -2884,8 +3190,8 @@ footer {
   padding-right: 0px;
 
   @include media-breakpoint-down(md) {
-    padding-left: 20px !important;
-    padding-right: 20px !important;
+    padding-left: 24px !important;
+    padding-right: 24px !important;
   }
 }
 
