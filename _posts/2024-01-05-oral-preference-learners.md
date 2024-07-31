@@ -1,5 +1,5 @@
 ---
-author:
+author: D.B. Brown
 duration: 4 Min Read
 excerpt: Ideally, people would have direct access to Scripture in their language, but that is not the reality of many unreached language groups...
 image: assets/images/articles/feature-oral-preference-learners.jpg
@@ -7,14 +7,13 @@ image_alt: A man walking and talking on his phone.
 layout: article
 nav_state: transparent-dark
 permalink: /articles/oral-preference-learners/
-title: Oral Preference Learners
+title: 'Oral Preference Learners:<br/>Understanding Our End Users'
 ---
-## Understanding Our End Users
 
 Some of us may be unfamiliar with the language of “oral preference learners” in the context of global missions. This phrase captures an essential concept that describes most, if not all, of Upstream’s end users.
 {: .highlight }
 
-### Literacy and Oral Communicators: Not So Black and White
+## Literacy and Oral Communicators: Not So Black and White
 
 Global literacy rates are reported to be at around 86%. Based on this, one would think that most people can read. However, there is much gray area when it comes to defining what it means to be "literate". For example, some countries check the literacy box if people can read at first or second grade levels.
 
@@ -32,7 +31,7 @@ God has graciously given us his written Word. Ideally, people would have direct 
 
 Although literate and non-literate can be helpful categories, this black and white dichotomy fails to correctly locate the majority of the world’s population. Oral preference learners fall into a gray space where some level of reading may take place, but receiving truth typically doesn’t happen in a person’s heart language through written means.
 
-### Why This Matters for Upstream Contributors
+## Why This Matters for Upstream Contributors
 
 If our end users are oral preference learners, then this reality helps us understand a common feature across each of Upstream’s projects. Even if languages or countries are different per app, we must design and develop while envisaging such an end user sitting across the table from us. 
 
@@ -49,4 +48,5 @@ Perhaps IKEA gets it right, after all. Apart from maddening frustration with the
 
 <hr class="footnote-separator">
 
-[^1]: https://orality.net/about/who-are-oral-communicators/ (emphasis mine)
+##### <sup>1</sup> [https://orality.net/about/who-are-oral-communicators/![](/assets/images/icons/arrows/in-line-arrow-external.svg){: .img-in-line }{:style="height: 14px;"}](https://orality.net/about/who-are-oral-communicators/){:target="_blank"}{:rel="noopener noreferrer"} (emphasis mine)
+{: .footnotes}
