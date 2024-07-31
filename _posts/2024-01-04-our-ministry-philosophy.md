@@ -9,7 +9,6 @@ nav_state: transparent-dark
 permalink: /articles/our-ministry-philosophy/
 title: Our Ministry Philosophy
 ---
-<br />
 
 A ministry philosophy describes a group’s approach towards how they go about their ministry. It’s a look underneath the hood, so to speak, to see the missiological engine that propels the ministry forward. At Upstream, we think it’s important to be upfront about what values drive us. You deserve to know these details if you’re considering being involved with us.
 {: .highlight }

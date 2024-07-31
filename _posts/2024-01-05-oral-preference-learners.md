@@ -7,9 +7,8 @@ image_alt: A man walking and talking on his phone.
 layout: article
 nav_state: transparent-dark
 permalink: /articles/oral-preference-learners/
-title: 'Oral Preference Learners: Understanding Our End Users'
+title: 'Oral Preference Learners:<br/>Understanding Our End Users'
 ---
-<br />
 
 Some of us may be unfamiliar with the language of “oral preference learners” in the context of global missions. This phrase captures an essential concept that describes most, if not all, of Upstream’s end users.
 {: .highlight }

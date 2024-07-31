@@ -1351,6 +1351,13 @@ main {
     }
   }
 
+  .lead {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 32px;
+    margin: 32px 0px;
+  }
+
   .content {
     padding-top: 0px;
     padding-bottom: 72px;
@@ -1376,6 +1383,8 @@ main {
     }
 
     h2 {
+      margin: 0px;
+
       @include media-breakpoint-down(md) {
         margin-bottom: 48px;
         text-align: center;
@@ -1732,7 +1741,9 @@ main {
 
     @include media-breakpoint-down(md) {
       font-size: 24px;
-      line-height: 36px;
+      line-height: 32px;
+      margin: 80px 0px;
+      padding: 0px 12px;
       width: auto;
     }
   }
@@ -2223,6 +2234,7 @@ main {
 
         .lead {
           font-size: 24px;
+          line-height: 32px;
         }
       }
     }
@@ -2278,23 +2290,24 @@ main {
   #content-box-3 {
     background-color: map-get($primary-colors, "black");
     border-radius: 40px;
-    padding: 112.5px 128px;
+    padding: 112.5px;
     margin: 0 44px;
     margin-bottom: 128px;
 
     @include media-breakpoint-down(lg) {
       margin: 0 20px;
       margin-bottom: 80px;
-      padding: 88px 20px;
+      padding: 88px 24px;
     }
 
     @include media-breakpoint-down(md) {
       margin: 80px 0;
       border-radius: 0;
-      padding: 88px 20px;
+      padding: 88px 24px 64px;
     }
 
     h2 {
+      margin-top: 0px;
       margin-bottom: 24px;
     }
 
@@ -2310,7 +2323,7 @@ main {
 
     p {
       margin: 0px;
-      padding: 0px 0px 80px;
+      padding: 0px;
 
       @include media-breakpoint-down(md) {
         padding-bottom: 48px;
@@ -2319,7 +2332,12 @@ main {
 
 
     .values {
-      gap: 48px 32px;
+      margin-top: 48px;
+      gap: 0px 32px;
+
+      @include media-breakpoint-down(md) {
+        margin-top: 0px;
+      }
 
       .value {
         h3,
@@ -2351,7 +2369,7 @@ main {
     text-align: center;
 
     @include media-breakpoint-down(lg) {
-      padding: 0 20px;
+      padding: 0 24px;
       margin-bottom: 80px;
     }
 
@@ -2398,8 +2416,8 @@ main {
     }
 
     .our-story {
-      gap: 160px;
-      padding: 144px 44px;
+      gap: 80px;
+      padding: 144px 72px;
 
       img {
         aspect-ratio: 1;
@@ -2435,8 +2453,7 @@ main {
         max-width: 50%;
 
         p {
-          margin-top: 16px;
-          margin-bottom: 20px;
+          margin-bottom: 32px;
 
           &.tagline {
             margin-top: 0px;
@@ -2450,7 +2467,10 @@ main {
           @include media-breakpoint-down(md) {
             font-size: 28px;
           }
+        }
 
+        h2 {
+          margin-top: 0px;
         }
 
         @include media-breakpoint-down(md) {
@@ -2463,7 +2483,7 @@ main {
 
   #content-box-6 {
     @include media-breakpoint-down(lg) {
-      margin: 0 20px;
+      margin: 0 24px;
     }
 
     h2.heading {
@@ -2518,7 +2538,7 @@ main {
 
   @include media-breakpoint-down(md) {
     padding-top: 64px;
-    padding-bottom: 80px;
+    padding-bottom: 0px;
   }
 
   h1 {
@@ -2551,6 +2571,13 @@ main {
       margin-top: 0px;
     }
 
+    p {
+      margin-bottom: 28px;
+    }
+
+    .start-box {
+      padding-top: 36px;
+    }
     .end-box {
       text-align: left;
 
@@ -2573,7 +2600,7 @@ main {
 
     @include media-breakpoint-down(md) {
       margin-bottom: 96px;
-      margin-top: 80px;
+      margin-top: 88px;
     }
 
     h2.heading {
@@ -2596,7 +2623,12 @@ main {
 
     .accordion {
       @include media-breakpoint-down(md) {
-        margin-top: 24px;
+        margin-top: 32px;
+      }
+
+      .accordion-body {
+        padding-left: 24px;
+        padding-right: 24px;
       }
     }
 
@@ -2607,7 +2639,7 @@ main {
 
     @include media-breakpoint-down(md) {
       min-height: 400px;
-      padding: 80px 20px;
+      padding: 92px 24px;
     }
 
     h2 {
@@ -2617,6 +2649,7 @@ main {
 
     p {
       color: map-get($primary-colors, "white");
+      margin-bottom: 20px;
     }
 
     .hero-content {
@@ -2645,13 +2678,28 @@ main {
 
   .metadata {
     h1 {
-      margin-bottom: 32px;
       margin-top: 16px;
+      margin-bottom: 32px;
+
+      @include media-breakpoint-down(md) {
+        margin-top: 8px;
+        margin-bottom: 24px;
+      }
+    }
+
+    .author {
+      @include media-breakpoint-down(md) {
+        margin-bottom: 48px;
+      }
     }
 
     img {
       border-radius: 40px;
-      margin-bottom: 24px;
+      margin-bottom: 72px;
+
+      @include media-breakpoint-down(md) {
+        margin-bottom: 48px;
+      }
     }
   }
 
@@ -2661,6 +2709,14 @@ main {
         font-size: medium;
         vertical-align: super;
       }
+    }
+
+    #what-do-we-mean-by-scripture-engagement {
+      margin-top: 0px;
+    }
+
+    #learn-with-us-title {
+      margin-top: 0px;
     }
 
     p.highlight {
