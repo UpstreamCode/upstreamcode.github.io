@@ -127,61 +127,52 @@ image: assets/images/share-upstream-code.jpg
 
   <div
     id="content-box-4"
-    class="d-flex flex-md-row align-items-center justify-content-center"
+    class="row align-items-center justify-content-center px-mobile"
   >
-    <div class="col col-12 col-md-10 justify-content-center px-mobile">
-      <div class="row">
-        <div class="col col-12 col-md-5 align-self-center justify-self-center">
-          <div style="width: 100%">
-            <div class="row flex-md-row justify-content-center">
-              <div class="audio-bg">
-                <div
-                  class="d-flex align-self-center justify-content-center audio-div"
-                >
-                  <img src="{{ "/assets/images/icons/audio.svg" | relative_url
-                  }}" class="audio-icon" alt="Audio icon" >
-                </div>
-              </div>
-            </div>
-          </div>
+    <div class="d-flex col col-12 col-md-5 justify-content-center audio-bg-container">
+      <div class="audio-bg">
+        <div
+          class="d-flex align-self-center justify-content-center audio-div"
+        >
+          <img src="{{ "/assets/images/icons/audio.svg" | relative_url
+          }}" class="audio-icon" alt="Audio icon" >
         </div>
-        <div class="d-none d-md-flex col col-md-1"></div>
-        <div class="d-flex col col-12 col-md-5">
-          <div class="align-self-center">
-            <p class="tagline mb-2">One For All</p>
-            <h2 class="mt-1">Orality Platform</h2>
-            <p>
-              Our solution began to take shape as a concept in 2019 and 2020 as
-              we were researching digital distribution needs and building
-              prototype apps. We didn’t find existing solutions, mobile apps or
-              otherwise, to be adequate (though some
-              <a
-                href="https://software.sil.org/scriptureappbuilder/"
-                target="_blank"
-                rel="noopener noreferrer"
-                ><b>fantastic solutions</b><img style="height: 15px;" src="{{
-                "/assets/images/icons/arrows/in-line-arrow-external.svg" |
-                relative_url }}" class="img-in-line"></a
-              >
-              already exist for
-              <a
-                href="https://software.sil.org/readingappbuilder/"
-                target="_blank"
-                rel="noopener noreferrer"
-                ><b>text-heavy content</b><img style="height: 15px;" src="{{
-                "/assets/images/icons/arrows/in-line-arrow-external.svg" |
-                relative_url }}" class="img-in-line"></a
-              >). So in 2021 we began a more concentrated effort to build
-              Orality Platform: a shared codebase from which multiple
-              language-specific apps can be spun up.
-            </p>
-            <p>
-              It's like using the same recipe to make different dishes. The
-              shared codebase is our recipe, and each app is a unique dish we
-              create from it.
-            </p>
-          </div>
-        </div>
+      </div>
+    </div>
+    <div class="d-flex col col-12 col-md-5 op-container">
+      <div class="align-self-center">
+        <p class="tagline mb-2">One For All</p>
+        <h2 class="mt-1">Orality Platform</h2>
+        <p>
+          Our solution began to take shape as a concept in 2019 and 2020 as
+          we were researching digital distribution needs and building
+          prototype apps. We didn’t find existing solutions, mobile apps or
+          otherwise, to be adequate (though some
+          <a
+            href="https://software.sil.org/scriptureappbuilder/"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><b>fantastic solutions</b><img style="height: 15px;" src="{{
+            "/assets/images/icons/arrows/in-line-arrow-external.svg" |
+            relative_url }}" class="img-in-line"></a
+          >
+          already exist for
+          <a
+            href="https://software.sil.org/readingappbuilder/"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><b>text-heavy content</b><img style="height: 15px;" src="{{
+            "/assets/images/icons/arrows/in-line-arrow-external.svg" |
+            relative_url }}" class="img-in-line"></a
+          >). So in 2021 we began a more concentrated effort to build
+          Orality Platform: a shared codebase from which multiple
+          language-specific apps can be spun up.
+        </p>
+        <p>
+          It's like using the same recipe to make different dishes. The
+          shared codebase is our recipe, and each app is a unique dish we
+          create from it.
+        </p>
       </div>
     </div>
   </div>
@@ -243,7 +234,7 @@ image: assets/images/share-upstream-code.jpg
     <div class="row">
       <div class="d-none d-md-flex col-md-1"></div>
       <div class="d-flex col flex-column justify-content-left">
-        <h2>Case Study</h2>
+        <h2 class="case-study-title">Case Study</h2>
       </div>
     </div>
     <div class="row">
@@ -253,7 +244,7 @@ image: assets/images/share-upstream-code.jpg
           <div
             class="d-flex flex-column-reverse flex-md-row align-items-center justify-content-center justify-content-md-start"
           >
-            <div class="accordion accordion-white case-study">
+            <div class="accordion accordion-white case-study align-self-start">
               <div class="accordion-item" style="border: none">
                 <h2 class="accordion-header" id="headingOne">
                   <button
@@ -274,7 +265,7 @@ image: assets/images/share-upstream-code.jpg
                   data-bs-parent="#accordionExample"
                 >
                   <div class="accordion-body">
-                    <p>
+                    <p class="p-padding">
                       A missionary team approached Upstream with a problem. The
                       ethnic group they serve is severely oppressed and is now
                       scattered around in various countries—often in refugee
@@ -339,14 +330,14 @@ image: assets/images/share-upstream-code.jpg
                   data-bs-parent="#accordionExample"
                 >
                   <div class="accordion-body">
-                    <p>The ethnic group now has access to an audio overview of the Bible! They downloaded our app through Google Play or the App Store. They were also able to download it through SD cards, where it was a more frictionless experience compared to mp3 files. Ultimately, accessing the content through the app allowed for a richer and more seamless way to engage with Scripture.</p>
+                    <p class="p-padding">The ethnic group now has access to an audio overview of the Bible! They downloaded our app through Google Play or the App Store. They were also able to download it through SD cards, where it was a more frictionless experience compared to mp3 files. Ultimately, accessing the content through the app allowed for a richer and more seamless way to engage with Scripture.</p>
                     <p>The app has reached over 1,000 downloads. Though we’re still thinking and learning about ways the app can be improved, we praise God that it is being used by missionaries, local Christians, and non-Christians alike.</p>
                   </div>
                 </div>
               </div>
             </div>
             <div class="d-none d-md-flex col-md-1"></div>
-            <div class="col col-12 col-md-5">
+            <div class="col col-12 col-md-5 align-self-start">
               <img src="{{ "/assets/images/man-on-motorcycle.png" | relative_url
               }}" class="img-fluid case-study-img">
             </div>
