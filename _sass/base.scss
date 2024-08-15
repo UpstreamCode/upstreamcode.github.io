@@ -634,7 +634,7 @@ input {
 
   @include media-breakpoint-down(sm) {
     background-position: 87% 102% !important;
-    padding-bottom: 20px !important;
+    padding-bottom: 24px !important;
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("images/woman-on-phone.jpg");
     background-repeat: no-repeat;
     background-size: 1052px;
@@ -1256,7 +1256,7 @@ main {
   }
 
   #content-box-2 {
-    margin-top: 145px;
+    margin-top: 100px;
 
     @include media-breakpoint-up(md) {
       .content-box {
@@ -1408,6 +1408,10 @@ main {
         @include media-breakpoint-down(md) {
           margin-top: 0px;
         }
+      }
+
+      &.member-role {
+        font-style: italic;
       }
     }
 
