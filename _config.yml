@@ -32,6 +32,8 @@ donate_url: https://give.pioneers.org/s-donate?firstname=%27Upstream%27&ProjectC
 
 theme: null
 
+google_analytics: G-6WMQ7FCBRJ
+
 # Build settings
 plugins:
   - jekyll-feed
